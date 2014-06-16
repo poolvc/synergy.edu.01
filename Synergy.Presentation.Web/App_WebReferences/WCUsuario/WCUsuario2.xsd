@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galexito.BE.Seg" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Seg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+  <xs:complexType name="BEUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q1:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Administrador" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Aplicaciones" nillable="true" type="tns:ArrayOfBEUsuarioAplicacion" />
+          <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoUsuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Conceptos" nillable="true" type="tns:ArrayOfBEUsuarioConcepto" />
+          <xs:element minOccurs="0" name="ExpiraPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="Llave" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Menus" nillable="true" type="tns:ArrayOfBEUsuarioMenu" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PECO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PerfilUsuarios" nillable="true" type="tns:ArrayOfBEUsuarioPerfil" />
+          <xs:element minOccurs="0" name="Preferencias" nillable="true" type="tns:ArrayOfBEUsuarioPreferencia" />
+          <xs:element minOccurs="0" name="ReiniciarPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reportes" nillable="true" type="tns:ArrayOfBEUsuarioReporte" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEUsuario" nillable="true" type="tns:BEUsuario" />
+  <xs:complexType name="ArrayOfBEUsuarioAplicacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEUsuarioAplicacion" nillable="true" type="tns:BEUsuarioAplicacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEUsuarioAplicacion" nillable="true" type="tns:ArrayOfBEUsuarioAplicacion" />
+  <xs:complexType name="BEUsuarioAplicacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BEUsuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Asignado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAplicacion" type="xs:int" />
+          <xs:element minOccurs="0" name="IdSuit" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEUsuarioAplicacion" nillable="true" type="tns:BEUsuarioAplicacion" />
+  <xs:complexType name="ArrayOfBEUsuarioConcepto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEUsuarioConcepto" nillable="true" type="tns:BEUsuarioConcepto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEUsuarioConcepto" nillable="true" type="tns:ArrayOfBEUsuarioConcepto" />
+  <xs:complexType name="BEUsuarioConcepto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BEUsuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Asignado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAplicacion" type="xs:int" />
+          <xs:element minOccurs="0" name="IdConcepto" type="xs:int" />
+          <xs:element minOccurs="0" name="IdGrupo" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEUsuarioConcepto" nillable="true" type="tns:BEUsuarioConcepto" />
+  <xs:complexType name="ArrayOfBEUsuarioMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEUsuarioMenu" nillable="true" type="tns:BEUsuarioMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEUsuarioMenu" nillable="true" type="tns:ArrayOfBEUsuarioMenu" />
+  <xs:complexType name="BEUsuarioMenu">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BEMenu">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoUsuario" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEUsuarioMenu" nillable="true" type="tns:BEUsuarioMenu" />
+  <xs:complexType name="BEMenu">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q2:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CantidadMenu" type="xs:int" />
+          <xs:element minOccurs="0" name="IdAplicacion" type="xs:int" />
+          <xs:element minOccurs="0" name="IdMenu" type="xs:int" />
+          <xs:element minOccurs="0" name="Nivel" type="xs:int" />
+          <xs:element minOccurs="0" name="Objeto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoControl" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEMenu" nillable="true" type="tns:BEMenu" />
+  <xs:complexType name="ArrayOfBEUsuarioPerfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEUsuarioPerfil" nillable="true" type="tns:BEUsuarioPerfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEUsuarioPerfil" nillable="true" type="tns:ArrayOfBEUsuarioPerfil" />
+  <xs:complexType name="BEUsuarioPerfil">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BEUsuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Asignado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Perfil" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEUsuarioPerfil" nillable="true" type="tns:BEUsuarioPerfil" />
+  <xs:complexType name="ArrayOfBEUsuarioPreferencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEUsuarioPreferencia" nillable="true" type="tns:BEUsuarioPreferencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEUsuarioPreferencia" nillable="true" type="tns:ArrayOfBEUsuarioPreferencia" />
+  <xs:complexType name="BEUsuarioPreferencia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BEUsuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Asignado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAplicacion" type="xs:int" />
+          <xs:element minOccurs="0" name="IdParametro" type="xs:int" />
+          <xs:element minOccurs="0" name="ParametroDetalle" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEUsuarioPreferencia" nillable="true" type="tns:BEUsuarioPreferencia" />
+  <xs:complexType name="ArrayOfBEUsuarioReporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEUsuarioReporte" nillable="true" type="tns:BEUsuarioReporte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEUsuarioReporte" nillable="true" type="tns:ArrayOfBEUsuarioReporte" />
+  <xs:complexType name="BEUsuarioReporte">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BEUsuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Asignado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAplicacion" type="xs:int" />
+          <xs:element minOccurs="0" name="IdReporte" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoReporte" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEUsuarioReporte" nillable="true" type="tns:BEUsuarioReporte" />
+</xs:schema>

@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/mas/masMant.master" AutoEventWireup="true"
+    CodeFile="masMantEditar.master.cs" Inherits="masMantEditar" %>
+
+<%@ MasterType TypeName="masMant" %>
+<asp:Content ID="contMant" ContentPlaceHolderID="cphArea" runat="Server">
+    <div id="image-interno-rep1">
+        <table class="menu_bar">
+            <tr>
+                <td>
+                    <div class="imagen-destacado-texto1" style="border-color: Blue; vertical-align:middle;">
+                        <h4>
+                            <asp:Label ID="lblTitulo" runat="server" Text=""></asp:Label> 
+                            <img alt="" height="10" src="../img/ico_sig.png" width="10" /> <asp:Label ID="lblSubTitulo" runat="server" Text="[Editar]"></asp:Label>
+                        </h4>
+                    </div>
+                   
+                </td>
+                <td>
+                    <div style="float: right">
+                        <div id="tabsB">
+                            <ul>
+                                <li> 
+                                    <asp:ImageButton ID="ibtAceptar" runat="server" ImageUrl="~/img/ico_save.jpg" ToolTip="<%$ Resources:resDiccionario, Aceptar %>"
+                                        CommandName="Aceptar" CommandArgument="1" oncommand="ibtMenu_Command" Height="25px" />
+                                </li>
+                                <li>
+                                    <asp:ImageButton ID="ibtAplicar" runat="server" ImageUrl="~/img/ico_edit.jpg" ToolTip="<%$ Resources:resDiccionario, Aplicar %>"
+                                        CommandName="Aplicar" CommandArgument="2" oncommand="ibtMenu_Command" 
+                                        Height="25px"/>
+                                </li>
+                                 <li>
+                                    <asp:ImageButton ID="ibtEjecutar" runat="server" ImageUrl="~/img/ico_ejecutar.png" ToolTip="<%$ Resources:resDiccionario, Ejecutar %>"
+                                        CommandName="Ejecutar" CommandArgument="4" oncommand="ibtMenu_Command" Height="25px" Visible ="false"/>
+                                </li>
+                                <li>
+                                    <asp:ImageButton ID="ibtSalir" runat="server" ImageUrl="~/img/ico_salir.png" ToolTip="<%$ Resources:resDiccionario, Cancelar %>"
+                                        CommandName="Cancelar" CommandArgument="3" oncommand="ibtMenu_Command" Height="25px" CausesValidation="false"/>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <asp:ContentPlaceHolder ID="cphArea" runat="server">
+        <div id="page">
+            <h1>
+                Aqui va el trabajo formulario</h1>
+            <!--end page -->
+        </div>
+    </asp:ContentPlaceHolder>
+    <div class="clearfix">
+    </div>
+</asp:Content>

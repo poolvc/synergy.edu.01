@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCCentroCosto" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCCentroCosto_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Listar_Sel_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_Sel" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Listar_Sel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_SelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_ListarPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_ListarPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IWCCentroCosto_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCCentroCosto">
+    <wsdl:operation name="Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCCentroCosto/Listar" message="tns:IWCCentroCosto_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCCentroCosto/ListarResponse" message="tns:IWCCentroCosto_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Sel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCCentroCosto/Listar_Sel" message="tns:IWCCentroCosto_Listar_Sel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCCentroCosto/Listar_SelResponse" message="tns:IWCCentroCosto_Listar_Sel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCCentroCosto/ListarPorUsuario" message="tns:IWCCentroCosto_ListarPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCCentroCosto/ListarPorUsuarioResponse" message="tns:IWCCentroCosto_ListarPorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCCentroCosto/Obtener" message="tns:IWCCentroCosto_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCCentroCosto/ObtenerResponse" message="tns:IWCCentroCosto_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCCentroCosto/Insertar" message="tns:IWCCentroCosto_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCCentroCosto/InsertarResponse" message="tns:IWCCentroCosto_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCCentroCosto/Actualizar" message="tns:IWCCentroCosto_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCCentroCosto/ActualizarResponse" message="tns:IWCCentroCosto_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCCentroCosto/Eliminar" message="tns:IWCCentroCosto_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCCentroCosto/EliminarResponse" message="tns:IWCCentroCosto_Eliminar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWCCentroCosto" type="tns:IWCCentroCosto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Listar">
+      <soap:operation soapAction="http://tempuri.org/IWCCentroCosto/Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Sel">
+      <soap:operation soapAction="http://tempuri.org/IWCCentroCosto/Listar_Sel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWCCentroCosto/ListarPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IWCCentroCosto/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <soap:operation soapAction="http://tempuri.org/IWCCentroCosto/Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IWCCentroCosto/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IWCCentroCosto/Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCCentroCosto">
+    <wsdl:port name="BasicHttpBinding_IWCCentroCosto" binding="tns:BasicHttpBinding_IWCCentroCosto">
+      <soap:address location="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

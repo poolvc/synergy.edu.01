@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCAplicacion" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCAplicacion.svc?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCAplicacion.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCAplicacion.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCAplicacion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCAplicacion.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCAplicacion_ListarPorSuit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorSuit" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_ListarPorSuit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorSuitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_ObtenerPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_ObtenerPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_ListarPorSuitAplicaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorSuitAplicaciones" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_ListarPorSuitAplicaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorSuitAplicacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_ListarPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_ListarPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IWCAplicacion_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCAplicacion">
+    <wsdl:operation name="ListarPorSuit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/ListarPorSuit" message="tns:IWCAplicacion_ListarPorSuit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/ListarPorSuitResponse" message="tns:IWCAplicacion_ListarPorSuit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/Obtener" message="tns:IWCAplicacion_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/ObtenerResponse" message="tns:IWCAplicacion_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/ObtenerPorCodigo" message="tns:IWCAplicacion_ObtenerPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/ObtenerPorCodigoResponse" message="tns:IWCAplicacion_ObtenerPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/Listar" message="tns:IWCAplicacion_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/ListarResponse" message="tns:IWCAplicacion_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorSuitAplicaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/ListarPorSuitAplicaciones" message="tns:IWCAplicacion_ListarPorSuitAplicaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/ListarPorSuitAplicacionesResponse" message="tns:IWCAplicacion_ListarPorSuitAplicaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/ListarPorUsuario" message="tns:IWCAplicacion_ListarPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/ListarPorUsuarioResponse" message="tns:IWCAplicacion_ListarPorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/Insertar" message="tns:IWCAplicacion_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/InsertarResponse" message="tns:IWCAplicacion_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/Actualizar" message="tns:IWCAplicacion_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/ActualizarResponse" message="tns:IWCAplicacion_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCAplicacion/Eliminar" message="tns:IWCAplicacion_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCAplicacion/EliminarResponse" message="tns:IWCAplicacion_Eliminar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWCAplicacion" type="tns:IWCAplicacion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarPorSuit">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/ListarPorSuit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/ObtenerPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorSuitAplicaciones">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/ListarPorSuitAplicaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/ListarPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IWCAplicacion/Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCAplicacion">
+    <wsdl:port name="BasicHttpBinding_IWCAplicacion" binding="tns:BasicHttpBinding_IWCAplicacion">
+      <soap:address location="http://localhost:8080/FDR.Galexito.WS/Gen/WCAplicacion.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

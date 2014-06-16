@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="387ad293-2de9-40e4-999c-2c40b6b891cd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/FDR.Galexito.Ws/Seg/WCMenu.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCMenu.disco" MetadataType="Disco" ID="5f860cc9-96b5-46be-be66-251ca4e847e1" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?disco" />
+    <MetadataFile FileName="WCMenu.wsdl" MetadataType="Wsdl" ID="306e3400-ee5a-45d5-8cc4-b763025de92f" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?wsdl" />
+    <MetadataFile FileName="WCMenu.xsd" MetadataType="Schema" ID="513638b4-205c-4ee7-82c6-47760d620777" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?xsd=xsd4" />
+    <MetadataFile FileName="WCMenu1.xsd" MetadataType="Schema" ID="d868fcfb-644a-4284-96f2-943c936e55b4" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCMenu2.xsd" MetadataType="Schema" ID="f3bc4f03-bdbf-404f-8b0f-ffb27eeb8083" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCMenu3.xsd" MetadataType="Schema" ID="e8ed2fd0-9df9-4b2c-aef5-b5e175cc1f4c" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?xsd=xsd3" />
+    <MetadataFile FileName="WCMenu4.xsd" MetadataType="Schema" ID="bde4ba25-57ca-41bb-a990-c9f7b8019f69" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

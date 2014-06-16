@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galexito.BE.Gcg" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Gcg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gcg/WCContenido.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+  <xs:complexType name="BEContenido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q1:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoContenido" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoSeccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdContenido" type="xs:int" />
+          <xs:element minOccurs="0" name="IdSeccion" type="xs:int" />
+          <xs:element minOccurs="0" name="Imagen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MetaClave" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MetaDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TextoCompleto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TextoIntro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEContenido" nillable="true" type="tns:BEContenido" />
+</xs:schema>

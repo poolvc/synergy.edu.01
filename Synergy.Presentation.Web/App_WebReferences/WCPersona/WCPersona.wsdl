@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCPersona" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCPersona.svc?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCPersona.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCPersona.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCPersona.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCPersona.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCPersona_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_ListarPorTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorTipo" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_ListarPorTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Obtener_Mant_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Mant" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Obtener_Mant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IWCPersona_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCPersona">
+    <wsdl:operation name="Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCPersona/Listar" message="tns:IWCPersona_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCPersona/ListarResponse" message="tns:IWCPersona_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCPersona/ListarPorTipo" message="tns:IWCPersona_ListarPorTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCPersona/ListarPorTipoResponse" message="tns:IWCPersona_ListarPorTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCPersona/Obtener" message="tns:IWCPersona_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCPersona/ObtenerResponse" message="tns:IWCPersona_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Mant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCPersona/Obtener_Mant" message="tns:IWCPersona_Obtener_Mant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCPersona/Obtener_MantResponse" message="tns:IWCPersona_Obtener_Mant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCPersona/Insertar" message="tns:IWCPersona_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCPersona/InsertarResponse" message="tns:IWCPersona_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCPersona/Actualizar" message="tns:IWCPersona_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCPersona/ActualizarResponse" message="tns:IWCPersona_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCPersona/Eliminar" message="tns:IWCPersona_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCPersona/EliminarResponse" message="tns:IWCPersona_Eliminar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWCPersona" type="tns:IWCPersona">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Listar">
+      <soap:operation soapAction="http://tempuri.org/IWCPersona/Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorTipo">
+      <soap:operation soapAction="http://tempuri.org/IWCPersona/ListarPorTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IWCPersona/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Mant">
+      <soap:operation soapAction="http://tempuri.org/IWCPersona/Obtener_Mant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <soap:operation soapAction="http://tempuri.org/IWCPersona/Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IWCPersona/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IWCPersona/Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCPersona">
+    <wsdl:port name="BasicHttpBinding_IWCPersona" binding="tns:BasicHttpBinding_IWCPersona">
+      <soap:address location="http://localhost:8080/FDR.Galexito.WS/Gen/WCPersona.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

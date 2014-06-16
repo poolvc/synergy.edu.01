@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCParametroDetalle.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+  <xs:complexType name="BEParametroDetalle">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q1:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Explicacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAplicacion" type="xs:int" />
+          <xs:element minOccurs="0" name="IdCompania" type="xs:int" />
+          <xs:element minOccurs="0" name="IdParametro" type="xs:int" />
+          <xs:element minOccurs="0" name="Parametro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParametroDetalle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorFecha" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValorNumero" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ValorTexto1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorTexto2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorTexto3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorTexto4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorTexto5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorTexto6" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEParametroDetalle" nillable="true" type="tns:BEParametroDetalle" />
+  <xs:complexType name="ArrayOfBEParametroDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEParametroDetalle" nillable="true" type="tns:BEParametroDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEParametroDetalle" nillable="true" type="tns:ArrayOfBEParametroDetalle" />
+</xs:schema>

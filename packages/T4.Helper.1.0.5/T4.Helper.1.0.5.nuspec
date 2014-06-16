@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>T4.Helper</id>
+    <version>1.0.5</version>
+    <authors>Matthieu MEZIL</authors>
+    <owners>Matthieu MEZIL</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package improves T4 experience</description>
+    <tags>T4</tags>
+  </metadata>
+</package>

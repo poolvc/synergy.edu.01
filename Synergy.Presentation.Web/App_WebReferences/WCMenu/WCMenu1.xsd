@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galexito.BE.Seg" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Seg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+  <xs:complexType name="BEMenu">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q1:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CantidadMenu" type="xs:int" />
+          <xs:element minOccurs="0" name="IdAplicacion" type="xs:int" />
+          <xs:element minOccurs="0" name="IdMenu" type="xs:int" />
+          <xs:element minOccurs="0" name="Nivel" type="xs:int" />
+          <xs:element minOccurs="0" name="Objeto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoControl" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEMenu" nillable="true" type="tns:BEMenu" />
+</xs:schema>

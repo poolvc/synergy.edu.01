@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCUsuario" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Seg" />
+      <xsd:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCUsuario_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ListarCompaniasPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCompaniasPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ListarCompaniasPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCompaniasPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ValidarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ValidarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ValidarUsuarioExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioExiste" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ValidarUsuarioExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ListarPorPerfilAsignacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorPerfilAsignacion" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ListarPorPerfilAsignacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPorPerfilAsignacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ReiniciarClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReiniciarClave" />
+  </wsdl:message>
+  <wsdl:message name="IWCUsuario_ReiniciarClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReiniciarClaveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCUsuario">
+    <wsdl:operation name="Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/Listar" message="tns:IWCUsuario_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/ListarResponse" message="tns:IWCUsuario_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/Obtener" message="tns:IWCUsuario_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/ObtenerResponse" message="tns:IWCUsuario_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/Insertar" message="tns:IWCUsuario_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/InsertarResponse" message="tns:IWCUsuario_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/Actualizar" message="tns:IWCUsuario_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/ActualizarResponse" message="tns:IWCUsuario_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/Eliminar" message="tns:IWCUsuario_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/EliminarResponse" message="tns:IWCUsuario_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCompaniasPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/ListarCompaniasPorUsuario" message="tns:IWCUsuario_ListarCompaniasPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/ListarCompaniasPorUsuarioResponse" message="tns:IWCUsuario_ListarCompaniasPorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/ValidarUsuario" message="tns:IWCUsuario_ValidarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/ValidarUsuarioResponse" message="tns:IWCUsuario_ValidarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/ValidarUsuarioExiste" message="tns:IWCUsuario_ValidarUsuarioExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/ValidarUsuarioExisteResponse" message="tns:IWCUsuario_ValidarUsuarioExiste_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorPerfilAsignacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/ListarPorPerfilAsignacion" message="tns:IWCUsuario_ListarPorPerfilAsignacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/ListarPorPerfilAsignacionResponse" message="tns:IWCUsuario_ListarPorPerfilAsignacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReiniciarClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCUsuario/ReiniciarClave" message="tns:IWCUsuario_ReiniciarClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCUsuario/ReiniciarClaveResponse" message="tns:IWCUsuario_ReiniciarClave_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWCUsuario" type="tns:IWCUsuario">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Listar">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCompaniasPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/ListarCompaniasPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioExiste">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/ValidarUsuarioExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPorPerfilAsignacion">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/ListarPorPerfilAsignacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReiniciarClave">
+      <soap:operation soapAction="http://tempuri.org/IWCUsuario/ReiniciarClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCUsuario">
+    <wsdl:port name="BasicHttpBinding_IWCUsuario" binding="tns:BasicHttpBinding_IWCUsuario">
+      <soap:address location="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

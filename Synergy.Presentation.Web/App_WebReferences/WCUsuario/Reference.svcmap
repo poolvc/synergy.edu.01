@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f92b47ac-70f7-46dd-b1b4-a010972db083" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/FDR.Galexito.Ws/Seg/WCUsuario.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCUsuario.xsd" MetadataType="Schema" ID="b01cc47f-7c3e-4310-8780-af796ee7c840" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCUsuario1.xsd" MetadataType="Schema" ID="5d576c85-a60a-48a3-9411-3f92181e2d34" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd4" />
+    <MetadataFile FileName="WCUsuario2.xsd" MetadataType="Schema" ID="46d49fa2-c2c2-4c15-aa6a-a94f6b800e2a" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCUsuario.wsdl" MetadataType="Wsdl" ID="c4c45501-e8c7-40b0-b12d-66ac1b536a35" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?wsdl" />
+    <MetadataFile FileName="WCUsuario3.xsd" MetadataType="Schema" ID="8b0e0be2-da2e-4b8a-82c2-eb6e1a552419" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCUsuario.disco" MetadataType="Disco" ID="a248b5e0-16e9-4a1c-88db-1c254c94c450" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?disco" />
+    <MetadataFile FileName="WCUsuario4.xsd" MetadataType="Schema" ID="a2ee3f36-b866-49ad-9e5b-81388a448606" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Seg/WCUsuario.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

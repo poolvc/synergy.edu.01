@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galexito.BE" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galexito.BE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Seg/WCMenu.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="BEEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fila" type="xs:int" />
+      <xs:element minOccurs="0" name="FilasXPagina" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pagina" type="xs:int" />
+      <xs:element minOccurs="0" name="Ref" type="xs:int" />
+      <xs:element minOccurs="0" name="RefAccion" type="tns:DbTipoAccion" />
+      <xs:element minOccurs="0" name="RefGuid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Seleccion" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalFilas" type="xs:int" />
+      <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioModificacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BEEntidad" nillable="true" type="tns:BEEntidad" />
+  <xs:simpleType name="DbTipoAccion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Insertar" />
+      <xs:enumeration value="Actualizar" />
+      <xs:enumeration value="Eliminar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DbTipoAccion" nillable="true" type="tns:DbTipoAccion" />
+  <xs:complexType name="BEEntidadParam">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ListaCadenas" nillable="true" type="tns:ArrayOfBEEntidadString" />
+          <xs:element minOccurs="0" name="ListaNumeros" nillable="true" type="tns:ArrayOfBEEntidadInt" />
+          <xs:element minOccurs="0" name="ValorCadena" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorEntero" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEEntidadParam" nillable="true" type="tns:BEEntidadParam" />
+  <xs:complexType name="ArrayOfBEEntidadString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEEntidadString" nillable="true" type="tns:BEEntidadString" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEEntidadString" nillable="true" type="tns:ArrayOfBEEntidadString" />
+  <xs:complexType name="BEEntidadString">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BEEntidadString" nillable="true" type="tns:BEEntidadString" />
+  <xs:complexType name="ArrayOfBEEntidadInt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEEntidadInt" nillable="true" type="tns:BEEntidadInt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEEntidadInt" nillable="true" type="tns:ArrayOfBEEntidadInt" />
+  <xs:complexType name="BEEntidadInt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BEEntidadInt" nillable="true" type="tns:BEEntidadInt" />
+</xs:schema>

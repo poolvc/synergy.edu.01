@@ -1,0 +1,32 @@
+
+ ******************** 
+ 2012-06-08 16:35:10,861 ERROR 5 gescon.logger - Error en la aplicación:System.NullReferenceException: Object reference not set to an instance of an object.
+   at masMant.Cargar(BEUsuarioSistema pbeUsu) in d:\CIDE\Interno\CIDE\PROYECTOS\GALEXITO SNT.NET\Fuentes\Galexito.Snt.Net\Galexito.Snt.Web\mas\masMant.master.cs:line 163
+   at masMant.CargarIni() in d:\CIDE\Interno\CIDE\PROYECTOS\GALEXITO SNT.NET\Fuentes\Galexito.Snt.Net\Galexito.Snt.Web\mas\masMant.master.cs:line 72
+   at masMant.Page_Init(Object sender, EventArgs e) in d:\CIDE\Interno\CIDE\PROYECTOS\GALEXITO SNT.NET\Fuentes\Galexito.Snt.Net\Galexito.Snt.Web\mas\masMant.master.cs:line 57
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.UserControl.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) 
+
+ ******************** 
+ 2012-06-08 16:40:34,904 ERROR 5 gescon.logger - Error en la aplicación:Microsoft.Reporting.WebForms.ReportServerException: The item '/GVE/GALEXITO_SNT/rep_snt_reporte_sunat_F0801_exporta' cannot be found. (rsItemNotFound)
+   at Microsoft.Reporting.WebForms.ServerReportSoapProxy.OnSoapException(SoapException e)
+   at Microsoft.Reporting.WebForms.Internal.Soap.ReportingServices2005.Execution.RSExecutionConnection.ProxyMethodInvocation.Execute[TReturn](RSExecutionConnection connection, ProxyMethod`1 initialMethod, ProxyMethod`1 retryMethod)
+   at Microsoft.Reporting.WebForms.Internal.Soap.ReportingServices2005.Execution.RSExecutionConnection.LoadReport(String Report, String HistoryID)
+   at Microsoft.Reporting.WebForms.ServerReport.EnsureExecutionSession()
+   at Microsoft.Reporting.WebForms.ServerReport.SetParameters(IEnumerable`1 parameters)
+   at rep_repSnt_0801.MostrarReporte(ReportViewer pRepView, ReportParameter[] pReparm, String pstrReporte) in d:\CIDE\Interno\CIDE\PROYECTOS\GALEXITO SNT.NET\Fuentes\Galexito.Snt.Net\Galexito.Snt.Web\rep\repSnt_0801.aspx.cs:line 122
+   at rep_repSnt_0801.CargarReporte(String pstrCodigoCompania, String pstrPeriodo, String pstrReporte) in d:\CIDE\Interno\CIDE\PROYECTOS\GALEXITO SNT.NET\Fuentes\Galexito.Snt.Net\Galexito.Snt.Web\rep\repSnt_0801.aspx.cs:line 105
+   at rep_repSnt_0801.Listar() in d:\CIDE\Interno\CIDE\PROYECTOS\GALEXITO SNT.NET\Fuentes\Galexito.Snt.Net\Galexito.Snt.Web\rep\repSnt_0801.aspx.cs:line 79
+   at rep_repSnt_0801.hlTab_Click(Object sender, EventArgs e) in d:\CIDE\Interno\CIDE\PROYECTOS\GALEXITO SNT.NET\Fuentes\Galexito.Snt.Net\Galexito.Snt.Web\rep\repSnt_0801.aspx.cs:line 58
+   at System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) 

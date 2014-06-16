@@ -1,0 +1,227 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="masPrincipal.master.cs"
+    Inherits="masPrincipal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link id="Link1" href="~/css/general2.css" rel="stylesheet" type="text/css" />
+    <title>Cide</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">
+                <a href="home">
+                    <img src="../img/logo.png" alt="Home" border="0" /></a>
+            </div>
+            <div id="header-right">
+                <div id="buscar">
+                    <a href="Contacto">
+                        <img border="0" src="../img/ico_contacto.png" width="25" height="17"></a><a href="Sitemap"><img
+                            src="../img/ico_sitemap.png" border="0" width="25" height="17"></a>
+                    <select name="drpLang" onchange="javascript:setTimeout()" id="drpLang" class="idioma">
+                        <option selected="selected" value="SP">Espa&#241;ol</option>
+                        <option value="EN">English</option>
+                    </select>
+                    <input name="txtText" type="text" id="txtText" /><input type="submit" name="butSearchInternal"
+                        value="Buscar" id="butSearchInternal" class="button" />
+                    <!--end buscar-->
+                </div>
+                <div id="menu-secundario">
+                    <ul>
+                        <li><a href="Contacto">Contacto</a></li>
+                        <li><a href="Novedades">Novedades</a></li>
+                        <li><a href="Prensa">Prensa</a></li>
+                        <li><a href="newsletters">Etc</a></li>
+                    </ul>
+                    <!--end menu secundario -->
+                </div>
+                <!--end header right -->
+            </div>
+            <div id="menu-principal">
+                <ul>
+                    <li id="first1"><a class="menu-height" href="Contacto">Contacto</a></li>
+                    <li id="first2"><a class="menu-height" href="Novedades">Ayuda</a></li>
+                    <li id="first3"><a class="menu-height" href="Servicios">Historial</a></li>
+                    <li id="first4"><a class="menu-height" href="http://gadizain.com.ar/global/">Controles</a></li>
+                    <li id="first5"><a class="menu-height" href="Entrenamiento">Aplicaciones</a></li>
+                    <li id="first6"><a class="menu-height" href="Compania/quienes-somos">Inicio</a></li>
+                </ul>
+                <!--end menu principal -->
+            </div>
+            <!--end header -->
+        </div>
+        <div id="maincol">
+            <div id="leftcol">
+                <div id="menu-side">
+                    <ul>
+                        <li><a class="active" href="Compania/Quienes-somos">Procesos Generales</a></li>
+                        <ul class="menu-side2">
+                            <li><a href="Entrenamiento/Aplicaciones-SAP/Academia-de-Finanzas-(Fi)-sp">Sub Modulo
+                                (FI)</a></li>
+                            <li><a href="Entrenamiento/Aplicaciones-SAP/Academia-de-Ventas-y-Distribucion-(SD)-sp">
+                                Sub Modulo (SD)</a></li>
+                            <li><a href="Entrenamiento/Aplicaciones-SAP/Academia-de-Recursos-Humanos-(HR)-sp">Recursos
+                                Humanos (HR)</a></li>
+                            <li><a href="Entrenamiento/Aplicaciones-SAP/Curso-SAP-Finanzas-AX00">Sub Modulo 3 (BW)</a></li>
+                            <li><a href="Entrenamiento/Aplicaciones-SAP/Academia-de-Controlling-(CO)">Controlling
+                                (CO)</a></li>
+                            <li><a href="Entrenamiento/Aplicaciones-SAP/SAP-Basis-Training-sp">Mantenimiento Basico
+                            </a></li>
+                            <li><a href="Entrenamiento/Aplicaciones-SAP/SP-Taller de Certificación SAP ECC (MM)">
+                                Taller</a></li>
+                        </ul>
+                        <li><a href="Compania/Equipo-Gerencial">Procesos de Control</a></li>
+                        <li><a href="Compania/Porque-Galexito">Presupuestos </a></li>
+                        <li><a href="Compania/Mision-y-Vision">Informacion Complementaria</a></li>
+                        <li><a href="Compania/Galeria-de-Fotos">Control de Unidades</a></li>
+                    </ul>
+                </div>
+                <div class="destacado2">
+                    <div class="box2">
+                        <h2>
+                            Destacado 1</h2>
+                        <p>
+                            Aqui puede ir algunas descripciones destacadas <a href="http://galexito/global">click
+                                aquí</a></p>
+                        <!--end box2-->
+                    </div>
+                    <div class="box2">
+                        <h2>
+                            Destacado 2</h2>
+                        <p>
+                            Aqui puede ir algunas descripciones destacadas . <a href="Testimonios">click aquí</a></p>
+                        <!--end box2-->
+                    </div>
+                    <div class="box2">
+                        <h2>
+                            Destacado 3</h2>
+                        <p>
+                            Aui va otras opcion destacadac... <a href="Compania/Galeria-de-Fotos">click aquí</a></p>
+                        <!--end box2-->
+                    </div>
+                    <!--end destacados2-->
+                </div>
+                <div class="destacado3">
+                    <div class="box2">
+                        <h2>
+                            Destacado de Otro Sitio</h2>
+                        <p>
+                            Este es otro criterio destacado0</p>
+                        <!--end box2-->
+                    </div>
+                    <!--end destacado3-->
+                </div>
+                <div class="destacado-j2ee">
+                    <div class="box2">
+                        <h2>
+                            Más información</h2>
+                        <p>
+                            Destacato 333.<br>
+                            Email: <a href="mailto:eeI@galexito.com">el@galexito.com</a></p>
+                        <!--end box2-->
+                    </div>
+                    <!--end destacados-j2ee-->
+                </div>
+                <div class="destacado-oracle">
+                    <div class="box2">
+                        <h2>
+                            Destacado 333</h2>
+                        <p>
+                            Contáctenos para solicitar más información.<br>
+                            Email: <a href="mailto:info@axs">info@galexitos.com</a></p>
+                        <!--end box2-->
+                    </div>
+                    <!--end destacados-oracle-->
+                </div>
+                <div class="destacado3">
+                    <!--end destacado3-->
+                </div>
+                <div class="box-test-left">
+                    <img height="76" src="files/SITE/TESTIMONIOS/TESTIMONIO_RUIZ.JPG" width="62" />
+                    <h4>
+                        Recomendacion - CIDE</h4>
+                    Pude identificar los procesos del CIDE...<a class="ampliar" href="Testimonios?ID=18104">Ampliar</a>
+                    <!--end box-text-home-->
+                </div>
+                <!--end leftcol -->
+            </div>
+            <div id="centercol">
+                <div id="flash-interno">
+                    <div class="flash-destacado">
+                        <h1>
+                            La mas alta calidad en servicios</h1>
+                    </div>
+                    <div class="flash-foto">
+                        <img src="../img/banner.jpg" /></div>
+                    <!-- <img src="img/banner-interna.jpg" />-->
+                </div>
+                <div id="page">                    
+                    <div style="text-align: right">
+                        <asp:Menu ID="_mnuAccion" runat="server" BackColor="AliceBlue" DynamicHorizontalOffset="2"
+                            Font-Names="Verdana" Font-Size="X-Small" ForeColor="#666666" StaticSubMenuIndent="10px"
+                            Orientation="Horizontal">
+                            <StaticSelectedStyle BackColor="#B0C4DE" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicHoverStyle BackColor="Azure" ForeColor="White" />
+                            <DynamicMenuStyle BackColor="#E3EAEB" />
+                            <DynamicSelectedStyle BackColor="#1C5E55" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticHoverStyle BackColor="#B0C4DE" ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem ImageUrl="~/img/ico2.jpg" Value=" " ToolTip="Cerrar" />
+                                <asp:MenuItem ImageUrl="~/img/ico1.jpg" Value=" " ToolTip="Abrir" />
+                                <asp:MenuItem ImageUrl="~/img/ico3.jpg" Value=" " ToolTip="Abrir" />
+                                <asp:MenuItem NavigateUrl="~/Menu3.aspx" ImageUrl="~/img/ico5.jpg" />
+                                <asp:MenuItem NavigateUrl="~/Menu3.aspx" ImageUrl="~/img/ico9.jpg" />
+                            </Items>
+                        </asp:Menu>
+                        <asp:XmlDataSource ID="xmldsMenu" runat="server" DataFile="~/xml/menuAccion.xml"
+                            XPath="menu/category"></asp:XmlDataSource>
+                        <asp:Menu ID="mnuGeneral" runat="server" DataSourceID="xmldsMenu" Orientation="Horizontal">
+                            <DataBindings>
+                                <asp:MenuItemBinding DataMember="item" ImageUrlField="img" NavigateUrlField="url"
+                                    TargetField="text" />
+                            </DataBindings>
+                        </asp:Menu>
+                    </div>
+                    <asp:ContentPlaceHolder ID="cph" runat="server">
+                        <h1>
+                        Aqui va el trabajo formulario</h1>
+                    </asp:ContentPlaceHolder>
+                    <!--end page -->
+                </div>
+                <div class="clearfix">
+                </div>
+                <!--end centercol -->
+            </div>
+            <div class="clearfix">
+            </div>
+            <!--end maincol -->
+        </div>
+        <!--end wrapper -->
+    </div>
+    <div id="footer">
+        <div id="footer-brands">
+            <img src="img/ventors.png" alt="SAP" width="17" height="70" /><img src="img/logo_sap.png"
+                alt="SAP" /><img src="img/logo_j2ee.png" alt="J2EE" /><img src="img/logo_oracle.png"
+                    alt="ORACLE" /><img src="img/logo_siebel.png" alt="Siebel" /><img src="img/logo_EA.png"
+                        alt="Enterprise Architect" /><img src="img/logo_epidata_pie.png" alt="Epidata" /></div>
+        <div id="footer-right">
+            ® all rights reserved | Soluciones Especificas S.A.<br>
+            <a href="http://www.galexito.com/">www.galexito.com</a><br>
+            <a href="mailto:info@galexito.com">info@galexito.com</a>
+            <!--end footer-right-->
+        </div>
+        <div class="logo-footer-syncro">
+            <a href="http://www.solucionesespecificas.com/" target="_blank">
+                <img src="img/spacer.png" alt="Desarrollado por Soluciones Especificas" width="18"
+                    height="18" border="0"></a>
+            <!--end logo-footer-syncro -->
+        </div>
+        <!--end footer -->
+    </div>
+    </form>
+</body>
+</html>

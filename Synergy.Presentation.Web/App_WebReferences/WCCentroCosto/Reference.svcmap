@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="32842e26-16e5-4e01-b551-61bac3ec6ebc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/FDR.Galexito.Ws/Gen/WCCentroCosto.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCCentroCosto.xsd" MetadataType="Schema" ID="7866ab50-4ede-4681-954e-13d987f0ccd5" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCCentroCosto.wsdl" MetadataType="Wsdl" ID="2931aa09-6d7e-4a7d-adf6-05457d1a1a61" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?wsdl" />
+    <MetadataFile FileName="WCCentroCosto1.xsd" MetadataType="Schema" ID="f25f292c-8aba-453b-92e6-279b4792ba43" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCCentroCosto2.xsd" MetadataType="Schema" ID="baf932b6-37d7-4c07-8833-7c605ebead15" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCCentroCosto3.xsd" MetadataType="Schema" ID="7328d56c-0da9-4c8f-87c6-a0de85f96b9f" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd4" />
+    <MetadataFile FileName="WCCentroCosto.disco" MetadataType="Disco" ID="4ee3b2e6-9737-404a-8393-29501789d0fb" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?disco" />
+    <MetadataFile FileName="WCCentroCosto4.xsd" MetadataType="Schema" ID="6df2f3ec-bc85-4f74-b710-e3434c76cbf5" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

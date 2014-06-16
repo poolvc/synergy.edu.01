@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="msgAlertaClaveDistinta" xml:space="preserve">
+    <value>La clave de confirmacion es distinta.</value>
+  </data>
+  <data name="msgAlertaIngresarDescripcion" xml:space="preserve">
+    <value>Debe ingresar la descripci\u00F3n.</value>
+  </data>
+  <data name="msgAlertaIngresarNombre" xml:space="preserve">
+    <value>Debe ingresar el nombre.</value>
+  </data>
+  <data name="msgAlertaSelecionarCompania" xml:space="preserve">
+    <value>Debe seleccionar una compan\u00EDa.</value>
+  </data>
+  <data name="msgErrorActualizarClave" xml:space="preserve">
+    <value>Error al actualizar la clave.</value>
+  </data>
+  <data name="msgErrorRegistrar" xml:space="preserve">
+    <value>Error al registrar.</value>
+  </data>
+  <data name="msgErrorRegistrarUsuario" xml:space="preserve">
+    <value>Error al registrar el usuario.</value>
+  </data>
+  <data name="msgAlertaIngresarDescripcionMenu" xml:space="preserve">
+    <value>Debe ingresar la descripci\u00F3n del Menú.</value>
+  </data>
+  <data name="msgAlertaIngresarNombreBusqueda" xml:space="preserve">
+    <value>Debe ingresar el Nombre de Búsqueda.</value>
+  </data>
+  <data name="msgAlertaCodigoYaExiste" xml:space="preserve">
+    <value>El código ya existe.</value>
+  </data>
+  <data name="msgErrorRegistrarAplicacion" xml:space="preserve">
+    <value>Error al registrar la Aplicaci\u00F3n.</value>
+  </data>
+  <data name="msgErrorActualizarAplicacion" xml:space="preserve">
+    <value>Error al actualizar la Aplicaci\u00F3n.</value>
+  </data>
+  <data name="msgErrorRegistrarPersona" xml:space="preserve">
+    <value>Error al registrar la Persona.</value>
+  </data>
+  <data name="msgErrorActualizarPersona" xml:space="preserve">
+    <value>Error al actualizar la Persona.</value>
+  </data>
+  <data name="msgErrorRegistrarMenu" xml:space="preserve">
+    <value>Error al registrar el Men\u00c1.</value>
+  </data>
+  <data name="msgErrorActualizarMenu" xml:space="preserve">
+    <value>Error al actualizar el Men\u00c1.</value>
+  </data>
+  <data name="msgErrorEliminarMenu" xml:space="preserve">
+    <value>Error al eliminar el Men\u00c1.</value>
+  </data>
+  <data name="msgAlertaSeleccioneMenu" xml:space="preserve">
+    <value>Debe seleccionar un Men&amp;uacute;</value>
+  </data>
+  <data name="msgAlertaSeleccioneAplicacion" xml:space="preserve">
+    <value>Debe seleccionar una Aplicaci\u00F3</value>
+  </data>
+  <data name="msgAlertaIngresarCodigo" xml:space="preserve">
+    <value>Debe ingresar el codigo.</value>
+  </data>
+  <data name="msgAlertaSeleccionarPECO" xml:space="preserve">
+    <value>Debe seleccionar el PECO</value>
+  </data>
+  <data name="msgAlertaSeleccioneUsuario" xml:space="preserve">
+    <value>Debe seleccionar un Usuario</value>
+  </data>
+  <data name="msgAlertaSeleccioneProcesoReporte" xml:space="preserve">
+    <value>Debe seleccionar un Proceso o Reporte</value>
+  </data>
+  <data name="msgAlertaSeleccionePerfil" xml:space="preserve">
+    <value>Debe seleccionar un Perfil</value>
+  </data>
+  <data name="msgAlertaSeleccioneConcepto" xml:space="preserve">
+    <value>Debe seleccionar un Concepto</value>
+  </data>
+  <data name="msgAlertaCodigoExiste" xml:space="preserve">
+    <value>El código ya existe.</value>
+  </data>
+  <data name="msgErrorActualizar" xml:space="preserve">
+    <value>Error al actualizar el registro.</value>
+    <comment>Galexito</comment>
+  </data>
+  <data name="msgErrorInactivar" xml:space="preserve">
+    <value>Error al inactivar el registro.</value>
+    <comment>Galexito</comment>
+  </data>
+  <data name="msgAlertaSeleccioneParametro" xml:space="preserve">
+    <value>Debe seleccionar un Par\u00E1metro</value>
+  </data>
+  <data name="msgAlertaSeleccionePais" xml:space="preserve">
+    <value>Debe seleccionar un Pa\u00EDs</value>
+  </data>
+  <data name="msgAlertaSeleccioneDepartamento" xml:space="preserve">
+    <value>Debe seleccionar un Departamento</value>
+  </data>
+  <data name="msgAlertaSeleccioneProvincia" xml:space="preserve">
+    <value>Debe seleccionar una provincia.</value>
+  </data>
+  <data name="msgAlertaSeleccioneUsuarioPerfil" xml:space="preserve">
+    <value>Debe seleccionar un Usuario o Perfil</value>
+  </data>
+  <data name="msgAlertaIngresarClave" xml:space="preserve">
+    <value>Debe ingresar la clave.</value>
+  </data>
+  <data name="msgAlertaIngresarCodigoCorrecto" xml:space="preserve">
+    <value>El codigo es incorrecto.</value>
+  </data>
+  <data name="msgAlertaIngresarUsuario" xml:space="preserve">
+    <value>Debe ingresar el usuario.</value>
+  </data>
+  <data name="msgAlertaIngresarOrden" xml:space="preserve">
+    <value>Debe ingresar el orden.</value>
+  </data>
+  <data name="msgAlertaRegistrarNombreBusqueda" xml:space="preserve">
+    <value>Error al registrar el Nombre B\u00FAsqueda.</value>
+  </data>
+  <data name="msgAlertaIngresarValorNumericoPresentacion" xml:space="preserve">
+    <value>La presentaci\u00F3n es un valor numérico.</value>
+  </data>
+  <data name="msgAlertaTipoMensualExiste" xml:space="preserve">
+    <value>El tipo de cambio mensual ya existe.</value>
+  </data>
+  <data name="msgAlertaIngresarPeriodo" xml:space="preserve">
+    <value>Debe ingresar el periodo.</value>
+  </data>
+  <data name="msgAlertaIngresarMonedaOrigen" xml:space="preserve">
+    <value>Debe ingresar la moneda origen.</value>
+  </data>
+  <data name="msgAlertaIngresarMonedaDestino" xml:space="preserve">
+    <value>Debe ingresar la moneda destino.</value>
+  </data>
+  <data name="msgAlertaIngresarValorCompra" xml:space="preserve">
+    <value>Debe ingresar el valor de compra.</value>
+  </data>
+  <data name="msgAlertaIngresarValorVenta" xml:space="preserve">
+    <value>Debe ingresar el valor de venta.</value>
+  </data>
+  <data name="msgAlertaIngresarDepartamento" xml:space="preserve">
+    <value>Ingresar el Departamento</value>
+  </data>
+  <data name="msgAlertaIngresarDistrito" xml:space="preserve">
+    <value>Ingresar el Distrito</value>
+  </data>
+  <data name="msgAlertaIngresarPais" xml:space="preserve">
+    <value>Ingresar el Pa\u00EDs</value>
+  </data>
+  <data name="msgAlertaIngresarProvincia" xml:space="preserve">
+    <value>Ingresar la Provincia</value>
+  </data>
+  <data name="msgAlertaClaveInvalida" xml:space="preserve">
+    <value>Clave Invalida.</value>
+  </data>
+  <data name="msgAlertaErrorNoIdentificado" xml:space="preserve">
+    <value>Error no identificado.</value>
+  </data>
+  <data name="msgAlertaIngresoPerfilNoUsuario" xml:space="preserve">
+    <value>Ha ingresado un Perfil. Debe ingresar un Usuario.</value>
+  </data>
+  <data name="msgAlertaNoExisteUsuario" xml:space="preserve">
+    <value>No existe el Usuario o esta inactivo.</value>
+  </data>
+  <data name="msgAlertaUsuarioBloqueado" xml:space="preserve">
+    <value>El usuario esta bloqueado.</value>
+  </data>
+  <data name="msgAlertaUsuarioNoRegistrado" xml:space="preserve">
+    <value>El usuario no esta registrado.</value>
+  </data>
+  <data name="msgAlertaSelecionarCompaniaHTML" xml:space="preserve">
+    <value>Debe seleccionar una companía.</value>
+  </data>
+  <data name="msgAlertaIngresarCodigoHTML" xml:space="preserve">
+    <value>Debe ingresar el código.</value>
+  </data>
+  <data name="msgAlertaIngresarDescripcionHTML" xml:space="preserve">
+    <value>Debe ingresar la descripción.</value>
+  </data>
+  <data name="msgAlertaNoExisteAplicativo" xml:space="preserve">
+    <value>No existe el aplicativo o no esta disponible.</value>
+  </data>
+  <data name="msgAlertaSelecionarTipoCompania" xml:space="preserve">
+    <value>Debe seleccionar un tipo de compañia.</value>
+  </data>
+  <data name="msgErrorReiniciarClave" xml:space="preserve">
+    <value>Error al Reiniciar Clave</value>
+  </data>
+  <data name="msgAlertaClaveVacio" xml:space="preserve">
+    <value>Ingresar Clave</value>
+  </data>
+  <data name="msgAlertaIngresarClaveConfirmar" xml:space="preserve">
+    <value>Debe ingresar clave para confirmar</value>
+  </data>
+  <data name="msgAlertaClaveDiferente" xml:space="preserve">
+    <value>Clave ingresado es diferente</value>
+  </data>
+  <data name="msgInformacionClaveCambiado" xml:space="preserve">
+    <value>Su clave se cambio con exito.</value>
+  </data>
+  <data name="msgAlertaIngresarClaveAnterior" xml:space="preserve">
+    <value>Debe ingresar clave anterior</value>
+  </data>
+  <data name="msgAlertaClaveDiferenteAnterior" xml:space="preserve">
+    <value>Clave ingresado es diferente anterior</value>
+  </data>
+  <data name="msgAlertaSeleccionarPersona" xml:space="preserve">
+    <value>Debe seleccionar una persona.</value>
+  </data>
+  <data name="msgInfoTodoDerechosReservados" xml:space="preserve">
+    <value>Todos los derechos reservados</value>
+  </data>
+  <data name="msgInfoSesionHaTerminado" xml:space="preserve">
+    <value>Su sesión ha terminado</value>
+  </data>
+  <data name="msgInfoCuentaFinalizadaInactividad" xml:space="preserve">
+    <value>La cuenta ha sido finalizada por inactividad </value>
+  </data>
+  <data name="msgAlertaAccionEjecutadaOK" xml:space="preserve">
+    <value>La acción se ejecutó satisfactoriamente</value>
+  </data>
+  <data name="msgErrorImportarConcepto" xml:space="preserve">
+    <value>Error al importar los conceptos</value>
+  </data>
+  <data name="msgAlertaLicenciaFinalizada" xml:space="preserve">
+    <value>Su licencia ha finalizado.</value>
+  </data>
+  <data name="msgAlertaIngresarAnioCorrecto" xml:space="preserve">
+    <value>Debe ingresar un año correcto</value>
+  </data>
+  <data name="msgAlertaIngresarTasa" xml:space="preserve">
+    <value>Ingresar tasa.</value>
+  </data>
+  <data name="msgAlertaSeleccionarPeriodicidad" xml:space="preserve">
+    <value>Seleccione periodicidad.</value>
+  </data>
+  <data name="msgAlertaAdmProcesando" xml:space="preserve">
+    <value>Procesando</value>
+    <comment>GALEXITO</comment>
+  </data>
+  <data name="msgErrorEnviarParametros" xml:space="preserve">
+    <value>Enviar Parametros</value>
+    <comment>GALEXITO</comment>
+  </data>
+  <data name="msgAlertaPerdidaDeCambiosRealizados" xml:space="preserve">
+    <value>Se perderá los cambios realizados. Desea continuar?</value>
+  </data>
+</root>

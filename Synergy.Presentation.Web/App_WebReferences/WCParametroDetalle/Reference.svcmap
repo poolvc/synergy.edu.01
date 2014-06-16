@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c6186bc4-7671-4d61-8939-644e93db5ae1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/FDR.Galexito.Ws/Gen/WCParametroDetalle.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCParametroDetalle.xsd" MetadataType="Schema" ID="4e73f968-1a6d-49aa-bd99-23b0b061f531" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCParametroDetalle.svc?xsd=xsd4" />
+    <MetadataFile FileName="WCParametroDetalle1.xsd" MetadataType="Schema" ID="59544ea2-ea43-429d-a0e3-258a953ded03" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCParametroDetalle.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCParametroDetalle2.xsd" MetadataType="Schema" ID="273e7f8b-fdae-4833-bfa9-e927b482fcdc" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCParametroDetalle.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCParametroDetalle3.xsd" MetadataType="Schema" ID="99ce10ba-a2da-48cd-a42d-d6c6c39e6751" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCParametroDetalle.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCParametroDetalle4.xsd" MetadataType="Schema" ID="08576648-0db1-4f46-bf40-5cc2cede503c" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCParametroDetalle.svc?xsd=xsd3" />
+    <MetadataFile FileName="WCParametroDetalle.disco" MetadataType="Disco" ID="627ea7d5-0062-464a-8e50-a7f4db34a411" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCParametroDetalle.svc?disco" />
+    <MetadataFile FileName="WCParametroDetalle.wsdl" MetadataType="Wsdl" ID="5ece2a73-0b0a-4a77-aa69-4164fbf71a31" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCParametroDetalle.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

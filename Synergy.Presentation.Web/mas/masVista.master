@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/mas/masGeneral.master" AutoEventWireup="true"
+    CodeFile="masVista.master.cs" Inherits="masVista" %>
+
+<asp:Content ID="contHeader" ContentPlaceHolderID="cphHeader" runat="Server">
+    <div id="header">
+       <div id="logo">
+           
+                <asp:Image ID="imgLogo" runat="server" ImageUrl="~/img/logo.png" />
+            
+        </div>
+        <div id="header-right">
+            <div id="buscar">
+                
+                <img border="0" src="../img/ico_cia.gif"> <asp:Label ID="lblCompania" Text="<%$ Resources:resDiccionario, Compania %>" runat="server"></asp:Label>
+
+                 <img border="0" src="../img/ico_usuario.gif"> <asp:Label ID="lblUsuario" Text="<%$ Resources:resDiccionario, Usuario %>" runat="server"></asp:Label>
+                
+                <a href="Contacto">
+                    <img border="0" src="../img/ico_contacto.png" width="25" height="17"></a><a href="Sitemap"><img
+                        src="../img/ico_sitemap.png" border="0" width="25" height="17"></a>
+                        Idioma
+                <select name="drpLang" onchange="javascript:setTimeout()" id="drpLang" class="idioma">
+                    <option selected="selected" value="SP">'<%= Resources.resDiccionario.Espanol %>'</option>
+                    <option value="EN">'<%= Resources.resDiccionario.Ingles %>'</option>
+                </select>
+
+            </div>
+           
+            <!--end header right -->
+        </div>
+        <div id="menu-principal">
+           
+            <!--end menu principal -->
+        </div>
+        <!--end header -->
+    </div>
+</asp:Content>
+<asp:Content ID="contMaincol" ContentPlaceHolderID="cphMaincol" runat="Server">
+    <asp:ContentPlaceHolder ID="cphArea" runat="server">
+        <div id="maincol">
+            <h1>
+                Aqui va el trabajo formulario</h1>            
+        </div>
+    </asp:ContentPlaceHolder>
+    <div class="clearfix">
+    </div>
+</asp:Content>
+<asp:Content ID="contFooter" ContentPlaceHolderID="cphFooter" runat="Server">
+    
+    </div>
+</asp:Content>

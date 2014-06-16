@@ -1,0 +1,189 @@
+﻿.lista
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    background: #fff;
+    margin: 1px 0px 0px 0px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.lista th
+{
+    font-size: 11px;
+    font-weight: bold;
+    color: #666666;
+    padding: 2px 1px 2px 1px;
+    border-bottom: 1px solid #6678b1;
+    border-bottom-color: #CCCCCC;
+    text-align: left;
+    background-color: #F9F9F9; /*d*/
+    height: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #F2F2F2;
+}
+.lista td
+{
+    border-bottom: 1px solid #ccc;
+    color: #333333;
+    padding: 2px 3px 2px 2px;
+    border-bottom-color: #EEEEEE;
+    height: 20px;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: #FDFDFD;
+}
+
+.lista tbody tr:hover td
+{
+    color: #009;
+    height: 20px;
+    background-color: #F4F4F4;
+}
+
+.selectedItem
+{
+    color: #009;
+    height: 20px;
+    background-color: #E5E5E5;
+}
+
+.lista-lin
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    background: #fff;
+    margin: 1px 0px 0px 0px;
+    border-collapse: collapse;
+    text-align: left;
+}
+.lista-lin th
+{
+    font-size: 11px;
+    font-weight: bold;
+    color: #666666;
+    padding: 2px 1px 2px 1px;
+    border-bottom: 1px solid #6678b1;
+    border-bottom-color: #CCCCCC;
+    text-align: left;
+    background-color: #F9F9F9; /*d*/
+    height: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #F2F2F2;
+}
+.lista-lin td
+{
+    border-bottom: 1px solid #ccc;
+    color: #333333;
+    padding: 1px 2px 1px 1px;
+    border-bottom-color: #EEEEEE;
+    height: 20px;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: #FDFDFD;
+}
+
+.lista-lin tbody tr:hover td
+{
+    color: #009;
+    height: 20px;
+    background-color: #F4F4F4;
+}
+
+/**/
+.forma
+{
+    font-size: 11px;
+    font-weight: normal;
+    color: #494949;
+    padding: 5px;
+    text-align: left;
+    background-color: #F8F8F8;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #DFDFDF;
+}
+
+.forma tr
+{
+    height: 21px;
+}
+
+.forma_grupo
+{
+    margin: 0px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0px;
+    text-align: left;
+    border-top: 0px solid #9CC2EF;
+    height: 25px;
+    border-spacing: 0px;
+    background-color: #DFDFDF;
+}
+
+.forma_subgrupo
+{
+    margin: 0px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0px;
+    text-align: left;
+    border-top: 0px solid #9CC2EF;
+    height: 25px;
+    border-spacing: 0px;
+    background-color: #F3F3F3;
+}
+
+.editar
+{
+    border-width: 0px;
+    background-color: #F8F8F8;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    border-collapse: collapse;
+
+    border-top-color: #F8F8F8;
+}
+
+.editar tr
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.lista-seleccion td
+{
+    color: #009;
+    height: 20px;
+    background-color: #F4F4F4;
+}
+
+.fila-tabla
+{
+     background-color: White;
+}
+
+.fila-tabla-seleccion
+{
+     background-color: #E5E5E5;
+}
+.acciones td
+{
+    border-width:0px;    
+}
+
+.columna-seleccion
+{
+    background-color: #00FF00;
+}

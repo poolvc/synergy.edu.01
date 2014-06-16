@@ -1,0 +1,141 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1-Presentation", "1.1-Presentation", "{FC280DAD-819D-4C9D-9D84-0260A5C69DD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3-Application", "1.3-Application", "{F12A3892-C1AD-40E5-93A6-5D6CDBF7A3A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4-Domain", "1.4-Domain", "{CE8FD978-4513-45A7-8106-014439D0377A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5-Data", "1.5-Data", "{2268D1A3-D015-4296-B5F9-B76487F5E940}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2-DistributedService", "1.2-DistributedService", "{25DD4CDD-F80C-483B-A3BE-164FD27654F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{6EABAFCE-B959-4115-9371-081DF97D1153}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServicesAgent", "ServicesAgent", "{B544695B-9B4D-4C6D-95ED-6B13A4E07ACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synergy.Infraestructure.CrossCutting", "Synergy.Infraestructure.CrossCutting\Synergy.Infraestructure.CrossCutting.csproj", "{3EB29220-04A9-4B3F-89C8-1EC59F93C37B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Synergy.External", "Synergy.External", "{9BFE3B9D-4170-4CEF-8547-3DDF9B0BD0D7}"
+	ProjectSection(SolutionItems) = preProject
+		Synergy.External\EncriptadorDLL.dll = Synergy.External\EncriptadorDLL.dll
+		Synergy.External\Microsoft.Practices.EnterpriseLibrary.Common.dll = Synergy.External\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		Synergy.External\Microsoft.Practices.EnterpriseLibrary.Data.dll = Synergy.External\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		Synergy.External\Microsoft.Practices.ServiceLocation.dll = Synergy.External\Microsoft.Practices.ServiceLocation.dll
+		Synergy.External\Microsoft.Practices.Unity.dll = Synergy.External\Microsoft.Practices.Unity.dll
+		Synergy.External\Microsoft.Practices.Unity.Interception.dll = Synergy.External\Microsoft.Practices.Unity.Interception.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Diagram", "0-Diagram", "{E28CCB17-CBEE-41E7-B33D-4E62FE80FF26}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Synergy.Gen.Uml", "Synergy.Gen.Uml\Synergy.Gen.Uml.modelproj", "{DC5EE515-CE7F-49C6-A3A9-8DCC376FA773}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceAgent", "ServiceAgent", "{4C05E207-8095-492F-B3F1-7171E9B89C51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Layers", "1-Layers", "{A4842DF1-BF20-4A4C-BC45-0694391AD7D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-DataBase", "2-DataBase", "{7A386AED-6317-4F29-8C41-AB516EB5E759}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.6-CrossCutting", "1.6-CrossCutting", "{2BF0E143-5700-4431-B6DA-681D02417C08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0CD11552-56FC-4F77-A38C-E92045592904}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synergy.Domain.Edu", "Synergy.Domain.Edu\Synergy.Domain.Edu.csproj", "{68138F3F-DF93-43B0-879C-719AADBC29CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synergy.Data.Edu", "Synergy.Data.Edu\Synergy.Data.Edu.csproj", "{A5473E0E-C290-4AD5-A415-FF3C5E6106A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synergy.Domain.Edu.Entities", "Synergy.Domain.Edu.Entities\Synergy.Domain.Edu.Entities.csproj", "{95384627-8CA1-4A44-84DB-27D9334B41B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synergy.Application.Edu", "Synergy.Application.Edu\Synergy.Application.Edu.csproj", "{5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Synergy.Presentation.Web", "http://localhost:30021", "{5B512E4D-4B6F-48D2-968F-E030788AAE99}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{5a5c8582-b3aa-4c7c-abfc-ab37e75dd740}|Synergy.Application.Edu.dll;{A5473E0E-C290-4AD5-A415-FF3C5E6106A9}|Synergy.Data.Edu.dll;{95384627-8CA1-4A44-84DB-27D9334B41B5}|Synergy.Domain.Edu.Entities.dll;{3eb29220-04a9-4b3f-89c8-1ec59f93c37b}|Synergy.Infraestructure.CrossCutting.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_30021"
+		Debug.AspNetCompiler.PhysicalPath = "Synergy.Presentation.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_30021\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_30021"
+		Release.AspNetCompiler.PhysicalPath = "Synergy.Presentation.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_30021\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Synergy.Presentation.Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740} = {5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EB29220-04A9-4B3F-89C8-1EC59F93C37B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB29220-04A9-4B3F-89C8-1EC59F93C37B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB29220-04A9-4B3F-89C8-1EC59F93C37B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB29220-04A9-4B3F-89C8-1EC59F93C37B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5EE515-CE7F-49C6-A3A9-8DCC376FA773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5EE515-CE7F-49C6-A3A9-8DCC376FA773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5EE515-CE7F-49C6-A3A9-8DCC376FA773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5EE515-CE7F-49C6-A3A9-8DCC376FA773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68138F3F-DF93-43B0-879C-719AADBC29CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68138F3F-DF93-43B0-879C-719AADBC29CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68138F3F-DF93-43B0-879C-719AADBC29CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68138F3F-DF93-43B0-879C-719AADBC29CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5473E0E-C290-4AD5-A415-FF3C5E6106A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5473E0E-C290-4AD5-A415-FF3C5E6106A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5473E0E-C290-4AD5-A415-FF3C5E6106A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5473E0E-C290-4AD5-A415-FF3C5E6106A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95384627-8CA1-4A44-84DB-27D9334B41B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95384627-8CA1-4A44-84DB-27D9334B41B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95384627-8CA1-4A44-84DB-27D9334B41B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95384627-8CA1-4A44-84DB-27D9334B41B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B512E4D-4B6F-48D2-968F-E030788AAE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B512E4D-4B6F-48D2-968F-E030788AAE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B512E4D-4B6F-48D2-968F-E030788AAE99}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B512E4D-4B6F-48D2-968F-E030788AAE99}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F12A3892-C1AD-40E5-93A6-5D6CDBF7A3A9} = {A4842DF1-BF20-4A4C-BC45-0694391AD7D6}
+		{CE8FD978-4513-45A7-8106-014439D0377A} = {A4842DF1-BF20-4A4C-BC45-0694391AD7D6}
+		{2268D1A3-D015-4296-B5F9-B76487F5E940} = {A4842DF1-BF20-4A4C-BC45-0694391AD7D6}
+		{25DD4CDD-F80C-483B-A3BE-164FD27654F6} = {A4842DF1-BF20-4A4C-BC45-0694391AD7D6}
+		{2BF0E143-5700-4431-B6DA-681D02417C08} = {A4842DF1-BF20-4A4C-BC45-0694391AD7D6}
+		{FC280DAD-819D-4C9D-9D84-0260A5C69DD5} = {A4842DF1-BF20-4A4C-BC45-0694391AD7D6}
+		{5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740} = {F12A3892-C1AD-40E5-93A6-5D6CDBF7A3A9}
+		{68138F3F-DF93-43B0-879C-719AADBC29CE} = {CE8FD978-4513-45A7-8106-014439D0377A}
+		{95384627-8CA1-4A44-84DB-27D9334B41B5} = {CE8FD978-4513-45A7-8106-014439D0377A}
+		{B544695B-9B4D-4C6D-95ED-6B13A4E07ACC} = {2268D1A3-D015-4296-B5F9-B76487F5E940}
+		{A5473E0E-C290-4AD5-A415-FF3C5E6106A9} = {2268D1A3-D015-4296-B5F9-B76487F5E940}
+		{3EB29220-04A9-4B3F-89C8-1EC59F93C37B} = {2BF0E143-5700-4431-B6DA-681D02417C08}
+		{DC5EE515-CE7F-49C6-A3A9-8DCC376FA773} = {E28CCB17-CBEE-41E7-B33D-4E62FE80FF26}
+		{4C05E207-8095-492F-B3F1-7171E9B89C51} = {FC280DAD-819D-4C9D-9D84-0260A5C69DD5}
+		{5B512E4D-4B6F-48D2-968F-E030788AAE99} = {FC280DAD-819D-4C9D-9D84-0260A5C69DD5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

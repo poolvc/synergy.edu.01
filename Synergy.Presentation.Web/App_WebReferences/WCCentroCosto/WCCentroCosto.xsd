@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCCentroCosto.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+  <xs:complexType name="BECentroCosto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q1:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoCentroCosto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CuentaAjusteInflacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GastoAdministrativo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GastoDirecto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GastoFijo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GastoFinanciero" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GastoProduccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GastoVenta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdCentroCosto" type="xs:int" />
+          <xs:element minOccurs="0" name="IdSupervisor" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Ingresos" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BECentroCosto" nillable="true" type="tns:BECentroCosto" />
+</xs:schema>

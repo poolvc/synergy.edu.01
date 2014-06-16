@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCPersona.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+  <xs:complexType name="BEPersona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q1:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Celular1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Celular2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Celular3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClasePersona" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoBarras" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoPersona" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorreoElectronico" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direccion" nillable="true" type="tns:ArrayOfBEDireccion" />
+          <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentoFiscal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsEmpleado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsOtro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsProveedor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstadoCivil" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaExpiracionVisa" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaInicioVisa" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaNacimiento" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdGrupo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="Nacionalidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreBusqueda" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sexo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEPersona" nillable="true" type="tns:BEPersona" />
+  <xs:complexType name="ArrayOfBEDireccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEDireccion" nillable="true" type="tns:BEDireccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEDireccion" nillable="true" type="tns:ArrayOfBEDireccion" />
+  <xs:complexType name="BEDireccion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q2:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion_Dist" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion_Dpto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion_Pais" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion_Prov" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion_TipoDireccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdDepartamento" type="xs:int" />
+          <xs:element minOccurs="0" name="IdDistrito" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPais" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="IdProvincia" type="xs:int" />
+          <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+          <xs:element minOccurs="0" name="Telefono1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoDireccion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEDireccion" nillable="true" type="tns:BEDireccion" />
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galexito.BE.Gen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/FDR.Galexito.WS/Gen/WCCompania.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galexito.BE" />
+  <xs:complexType name="BECompania">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Galexito.BE" base="q1:BEEntidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AfectoIGV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoCompania" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditoFiscal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdCompania" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaginaWeb" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RTPS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RangoIngresos" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RangoPersonal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RepresentanteLegal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RepresentanteLegalDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RetencionIGV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoCompania" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BECompania" nillable="true" type="tns:BECompania" />
+</xs:schema>

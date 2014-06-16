@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="108dd521-5fcd-42a8-aff3-5d64c1363a0d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/FDR.Galexito.Ws/Gen/WCReporte.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCReporte.xsd" MetadataType="Schema" ID="e6423bae-1bd0-40e8-8bf8-7837b92e4730" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCReporte.svc?xsd=xsd3" />
+    <MetadataFile FileName="WCReporte.disco" MetadataType="Disco" ID="a9f89457-3a71-4f7a-b4b6-ae8530d6ba41" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCReporte.svc?disco" />
+    <MetadataFile FileName="WCReporte1.xsd" MetadataType="Schema" ID="3bbd7ab0-81b7-42b8-b170-6c6c45770b54" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCReporte.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCReporte.wsdl" MetadataType="Wsdl" ID="a54ed14b-dba3-4567-9131-1495a38b8f65" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCReporte.svc?wsdl" />
+    <MetadataFile FileName="WCReporte2.xsd" MetadataType="Schema" ID="16665e8f-240a-4dc1-a290-25151cea545c" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCReporte.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCReporte3.xsd" MetadataType="Schema" ID="c09b5b1f-fbce-4f2e-b429-53732386f741" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCReporte.svc?xsd=xsd4" />
+    <MetadataFile FileName="WCReporte4.xsd" MetadataType="Schema" ID="3a7f43d5-b8e4-4fbc-9d3b-d2875696d929" SourceId="1" SourceUrl="http://localhost:8080/FDR.Galexito.WS/Gen/WCReporte.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

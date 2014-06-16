@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/mas/masMant.master" AutoEventWireup="true"
+    CodeFile="masMantListar.master.cs" Inherits="masMantListar" %>
+<%@ MasterType TypeName="masMant" %>
+<asp:Content ID="contMant" ContentPlaceHolderID="cphArea" runat="Server">
+    <div id="image-interno-rep1">
+        <table class="menu_bar">
+            <tr>
+                <td>
+                    <div class="imagen-destacado-texto1" >
+                       <h4>
+                            <asp:Label ID="lblTitulo" runat="server" Text=""></asp:Label>
+                       </h4>
+                    </div>
+                </td>
+                <td>
+                    <div style="float: right">
+                         <div id="tabsB">
+                                <ul>
+                                    <li> 
+                                        <asp:ImageButton ID="ibtBuscar" runat="server" ImageUrl="~/img/ico_bus1.gif" ToolTip="<%$ Resources:resDiccionario, Buscar %>"
+                                            CommandName="Buscar" CommandArgument="1" oncommand="ibtMenu_Command" Height="25px" />
+                                    </li>
+                                    <li>
+                                        <asp:ImageButton ID="ibtNuevo" runat="server" ImageUrl="~/img/ico_add.gif" ToolTip="<%$ Resources:resDiccionario, Nuevo %>"
+                                            CommandName="Nuevo" CommandArgument="2" oncommand="ibtMenu_Command" Height="25px"/>
+                                    </li>
+                                     <li>
+                                         <asp:ImageButton ID="ibtProcesar" runat="server" ImageUrl="~/img/ico_ejecutar.png" ToolTip="<%$ Resources:resDiccionario, Procesar %>"
+                                            CommandName="Procesar" CommandArgument="1" OnCommand="ibtMenu_Command" Height="25px" Visible="false" />
+                                    </li>
+                                    <li>
+                                        <asp:ImageButton ID="ibtExportar" runat="server" ImageUrl="~/img/ico_edit.jpg" ToolTip="<%$ Resources:resDiccionario, Exportar %>"
+                                            CommandName="Exportar" CommandArgument="3" oncommand="ibtMenu_Command" Height="25px"/>
+                                    </li>
+                                     <li>
+                                        <asp:ImageButton ID="ibtImprimir" runat="server" ImageUrl="~/img/ico_imp.jpg" ToolTip="<%$ Resources:resDiccionario, Imprimir %>"
+                                            CommandName="Imprimir" CommandArgument="3" oncommand="ibtMenu_Command" 
+                                             Height="25px" Visible="False"/>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="text-align: right">
+    </div>
+    <asp:ContentPlaceHolder ID="cphArea" runat="server">
+        <div id="page">
+            <h1>
+                Aqui va el trabajo formulario</h1>
+            <!--end page -->
+        </div>
+    </asp:ContentPlaceHolder>
+    <div class="clearfix">
+    </div>
+</asp:Content>
