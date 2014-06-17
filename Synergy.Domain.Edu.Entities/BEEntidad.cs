@@ -9,6 +9,7 @@ namespace Synergy.Domain.Edu.Entities
     public class BEEntidad 
     {
         [DataMember]
+
         public virtual int Id { get; set; }
         [DataMember]
         public virtual string Codigo { get; set; }
