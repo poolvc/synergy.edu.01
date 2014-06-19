@@ -45,6 +45,7 @@
     <Compile Include="BEEntidadParam.cs" />
     <Compile Include="BEEntidadString.cs" />
     <Compile Include="BEEntitdadInt.cs" />
+    <Compile Include="Edu\BEFamiliaSel.cs" />
     <Compile Include="Edu\BEEmpleado.cs" />
     <Compile Include="Edu\BEPeriodoAcademico.cs" />
     <Compile Include="Enumeradores\DbConnectionId.cs" />

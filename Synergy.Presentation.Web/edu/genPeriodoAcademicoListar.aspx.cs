@@ -10,6 +10,8 @@ using System.Collections.Specialized;
 using Synergy.Application.Edu;
 using Synergy.Domain.Edu.Entities;
 using Synergy.Infraestructure.CrossCutting;
+using System.Web.Services;
+using System.Web.Script.Services;
 
 public partial class genPeriodoAcademicoListar : ObjectPage
 {
@@ -85,18 +87,18 @@ public partial class genPeriodoAcademicoListar : ObjectPage
         ImageButton ibt;
         if (e.Item.ItemType == ListViewItemType.DataItem)
         {
-            ibt = (ImageButton)e.Item.FindControl("ibtEliminar");
-            Label lb = (Label)e.Item.FindControl("lblEstado");
-            if (((Label)e.Item.FindControl("lblEstado")).Text == Constantes.ESTADO_ACTIVO_DESC)
-            {
-                ibt.ImageUrl = Constantes.ESTADO_ACTIVO_URL;
-                ibt.ToolTip = Resources.resDiccionario.Inactivar;
-            }
-            else
-            {
-                ibt.ImageUrl = Constantes.ESTADO_INACTIVO_URL;
-                ibt.ToolTip = Resources.resDiccionario.Activar;
-            }
+            //ibt = (ImageButton)e.Item.FindControl("ibtEliminar");
+            //Label lb = (Label)e.Item.FindControl("lblEstado");
+            //if (((Label)e.Item.FindControl("lblEstado")).Text == Constantes.ESTADO_ACTIVO_DESC)
+            //{
+            //    ibt.ImageUrl = Constantes.ESTADO_ACTIVO_URL;
+            //    ibt.ToolTip = Resources.resDiccionario.Inactivar;
+            //}
+            //else
+            //{
+            //    ibt.ImageUrl = Constantes.ESTADO_INACTIVO_URL;
+            //    ibt.ToolTip = Resources.resDiccionario.Activar;
+            //}
         }
     }
 
@@ -195,7 +197,33 @@ public partial class genPeriodoAcademicoListar : ObjectPage
 
     #endregion
 
-    #region WEBSERVICES
+    #region Metodos de Aplicacion
+
+
+    /// <summary>
+    /// Método Lista Periodo Academico
+    /// </summary>
+    /// <returns>Devuelve un DataSet</returns>
+    /// 
+    [WebMethod]
+    [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+    protected List<BEFamiliaSel> ListarFamiliaPorCampo(string pstrColumna, string pstrValor, int pintPagina)
+    {
+        BEFamiliaSel be = new BEFamiliaSel()
+        {
+            Columna = pstrColumna,
+            Valor = pstrValor,
+            Pagina = pintPagina,
+        };
+
+        List<BEFamiliaSel> lst = new List<BEFamiliaSel>();
+        BLFamiliaSel bl = new BLFamiliaSel();
+        //using (BLPeriodoAcademico bl = new BLPeriodoAcademico())
+        //{
+        lst = bl.ListarPorCampo(be);
+        //}
+        return lst;
+    }
 
     /// <summary>
     /// Método Lista Periodo Academico
@@ -211,10 +239,11 @@ public partial class genPeriodoAcademicoListar : ObjectPage
         };
 
         List<BEPeriodoAcademico> lst = new List<BEPeriodoAcademico>();
-        using (BLPeriodoAcademico bl = new BLPeriodoAcademico())
-        {
+        BLPeriodoAcademico bl = new BLPeriodoAcademico();
+        //using (BLPeriodoAcademico bl = new BLPeriodoAcademico())
+        //{
             lst = bl.Listar(be);
-        }
+        //}
         return lst;
     }
 
@@ -237,6 +266,6 @@ public partial class genPeriodoAcademicoListar : ObjectPage
         return dt;
     }
 
-    #endregion
+    #endregion Metodos de Aplicacion
 
 }

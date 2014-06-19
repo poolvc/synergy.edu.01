@@ -7,7 +7,7 @@ using Synergy.Domain.Edu.Entities;
 
 namespace Synergy.Application.Edu
 {
-    public class BLPeriodoAcademico : IDisposable
+    public class BLPeriodoAcademico //: IDisposable
     {
         DLPeriodoAcademico _dl = new DLPeriodoAcademico();
 
@@ -57,9 +57,10 @@ namespace Synergy.Application.Edu
         }
 
 
-        public void Dispose()
-        {
-            Dispose();
-        }
+
+        //public void Dispose()
+        //{
+        //    Dispose();
+        //}
     }
 }

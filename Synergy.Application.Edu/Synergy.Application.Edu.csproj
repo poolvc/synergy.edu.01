@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Edu\BLEmpleado.cs" />
+    <Compile Include="Edu\BLFamiliaSel.cs" />
     <Compile Include="Edu\BLPeriodoAcademico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

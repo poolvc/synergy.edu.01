@@ -27,7 +27,7 @@ namespace Synergy.Data.Edu
         {
             List<BEPeriodoAcademico> lst = new List<BEPeriodoAcademico>();
             SqlDatabase sqlDB = new SqlDatabase(CadenaConexion.Obtener());
-            DbCommand dbCmd = sqlDB.GetStoredProcCommand("Usp_GALEXITO_GEN_Periodo_Listar");
+            DbCommand dbCmd = sqlDB.GetStoredProcCommand("uSp_Syn_ED_PeriodoAcademico_Listar");
             try
             {
                 dbCmd.CommandTimeout = CadenaConexion.CommandTimeout;
