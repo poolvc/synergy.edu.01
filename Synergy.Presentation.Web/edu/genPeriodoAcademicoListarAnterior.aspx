@@ -1,30 +1,32 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mas/masMantListar.master" AutoEventWireup="true" CodeFile="genPeriodoAcademicoListar.aspx.cs"
-    Inherits="genPeriodoAcademicoListar" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mas/masMantListar.master" AutoEventWireup="true" CodeFile="genPeriodoAcademicoListarAnterior.aspx.cs"
+    Inherits="genPeriodoAcademicoListarAnterior" %>
 
 <%@ MasterType TypeName="masMantListar" %>
 <%@ Register Src="~/ucx/ucPaginador.ascx" TagName="ucPaginador" TagPrefix="uc1" %>
-<%@ Register Src="~/ucx/ucFamiliaSelector.ascx" TagPrefix="uc1" TagName="ucFamiliaSelector" %>
-<%@ Register Src="~/ucx/ucAlumnoSelector.ascx" TagPrefix="uc1" TagName="ucAlumnoSelector" %>
-
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphArea" runat="Server">
 
-   
+    <link href="../Content/simplePagination.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Scripts/underscore-min.js"></script>
+    <script type="text/javascript" src="../Scripts/base/modTemplate.js"></script>
+    <script src="../Scripts/jquery.simplePagination.js"></script>
+
     <script type="text/javascript">
 
         function AbrirSelectorFamilia(divname) {
             var inPaginas = 1;
+            $("#hdFamilia").val("");
             $('#' + divname).dialog({
                     autoOpen: false,
                     modal: true,
                     bgiframe: true,
-                    title: '<%= Resources.resDiccionario.Familias %>',
+                    title: '<%= Resources.resDiccionario.Seleccion %>',
                     width: 800,
                     height: 450,
                     buttons:
                         {
                             "Aceptar": function () {
-                                document.getElementById('<%= txtFamilia.ClientID %>').value = document.getElementById("hdCodigoSelectorFamilia").value;
+                                document.getElementById('<%= txtFamilia.ClientID %>').value = document.getElementById("hdFamilia").value;
                                 $(this).dialog("close");
                             },
                             "Cancelar": function () {
@@ -37,30 +39,7 @@
                     $('#' + divname).parent().appendTo($("form:first"));
         }
 
-        function AbrirSelectorAlumno(divname) {
-            var inPaginas = 1;
-            $('#' + divname).dialog({
-                autoOpen: false,
-                modal: true,
-                bgiframe: true,
-                title: '<%= Resources.resDiccionario.Alumnos %>',
-                    width: 800,
-                    height: 450,
-                    buttons:
-                        {
-                            "Aceptar": function () {
-                                document.getElementById('<%= txtFamilia.ClientID %>').value = document.getElementById("hdCodigoSelectorAlumno").value;
-                                $(this).dialog("close");
-                            },
-                            "Cancelar": function () {
-                                $(this).dialog("close");
-                                //cancel
-                            }
-                        }
-            });
-                    $('#' + divname).dialog('open');
-                    $('#' + divname).parent().appendTo($("form:first"));
-                }
+
 
     </script>
 
@@ -77,8 +56,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtFamilia" runat="server"></asp:TextBox>
-                     <input  type="button" id="ibFamilias" onclick="javascript: return AbrirSelectorFamilia('selectorConteinerFamilia');"/>
-                     <input  type="button" id="ibAlumnos" onclick="javascript: return AbrirSelectorAlumno('selectorConteinerAlumno');"/>
+                     <input  type="button" id="ibFamilias" onclick="javascript: return AbrirSelectorFamilia('selectorConteiner');"/>
                 </td>
             </tr>
         </table>
@@ -148,6 +126,7 @@
                         </th>
                     </tr>
 
+
                     <tr>
                         <td colspan="7">
                             <%= Resources.resDiccionario.NoHayRegistros %>
@@ -164,13 +143,74 @@
         </div>
     </div>
 
-    <div id="selectorConteinerFamilia" style="display: none; font-size: 90%;">
-        <uc1:ucFamiliaSelector runat="server" ID="ucFamiliaSelector" />
+    <div id="selectorConteiner" style="display: none; font-size: 90%;">
+        <div id="selectorFamiliaFiltro">
+            <table class="filtro_bar">
+                <tr>
+                    <td style="width: 5%">
+                        <asp:Label ID="lblCodigoCentroCosto" runat="server" Text="<%$ Resources:resDiccionario, Codigo %>"></asp:Label>:
+                    </td>
+                    <td style="width: 5%">
+                         <select id="selCampo">
+                            <option value="ApellidoPaterno">Apellido Paterno</option>
+                            <option value="ApellidoMaterno">Apellido Materno</option>
+                            <option value="AlumnoGrupo">Codigo Familia</option>
+                        </select>
+                    </td>
+                   
+                    <td style="width: 5%">
+                        <asp:Label ID="lblDescripcion" runat="server" Text="<%$ Resources:resDiccionario, Descripcion %>"></asp:Label>:
+                    </td>
+                    <td style="width: 5%">
+                        <input type="text" id="inValor"/>
+                    </td>
+                   
+                    <td>
+                       
+                        <img alt="Buscar" src="../img/ico_buscar4.gif" onclick="BuscarFamiliasSel();"  />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="selectorFamiliaSel">
+         </div>
+        <div id="selectorFamiliaSelPag" style="position:absolute; bottom:0;"></div>
+        <input type="hidden" id="hdFamilia" />
     </div>
-    
-     <div id="selectorConteinerAlumno" style="display: none; font-size: 90%;">
-            <uc1:ucAlumnoSelector runat="server" ID="ucAlumnoSelector" />
-     </div>
+    <script type="text/template" id="listaFamiliaSel">
+
+      <table class="lista">
+        <tr>
+           <th style="width: 5%">Fila</th> 
+           <th style="width: 10%">Codigo</th>
+           <th style="width: 30%">Apellido Paterno</th>
+           <th style="width: 30%">Apellido Materno</th>
+           <th>Estado</th>
+        </tr>
+       <@ if(Familias.length>0) { @>
+             <@ _.each(Familias, function(Familia) { @>
+                  <tr onclick="fnSelecionarFilaFamilia(this,'<@ print(Familia.AlumnoGrupo); @>');"" >
+                    <td><@ print(Familia.Fila); @></td> 
+                    <td><@ print(Familia.AlumnoGrupo); @></td>
+                    <td><@ print(Familia.ApellidoPaterno); @></td>
+                    <td><@ print(Familia.ApellidoMaterno); @></td>
+                     <@ if(Familias.Estado = "S") { @>
+                        <td>Activo</td>
+                      <@ }else { @>
+                        <td>Inactivo</td>
+                      <@ } @>
+                  </tr>
+            <@ }); @>
+        <@ }else { @>
+             <tr>
+               <td colspan="3"> <%= Resources.resDiccionario.NoHayRegistros %></td>
+            </tr>
+        <@ } @>
+
+      </table>
+    </script>    
+  
+
     
     <div id="loadingScreen"> </div>
 </asp:Content>

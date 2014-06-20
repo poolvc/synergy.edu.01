@@ -1,11 +1,11 @@
 ﻿
 
 
-var sColumnaAnterior;
+var sColAntSelectorFamilia;
 function BuscarFamiliasSel() {
-    var sColumna = $("#selCampo").val();
-    sColumnaAnterior = sColumna;
-    var sValor = $("#inValor").val();
+    var sColumna = $("#selCampoSelectorFamilia").val();
+    sColAntSelectorFamilia = sColumna;
+    var sValor = $("#inValorSelectorFamilia").val();
     var iPagina = 1;
     ListarFamiliasSel(sColumna, sValor, iPagina, true);
 }
@@ -15,7 +15,7 @@ function ListarFamiliasSel(psColumna, psValor, piPagina, pbPag) {
     $(document).ready(function () {
 
         var compilado = _.template($('#listaFamiliaSel').html());
-        AbrirVentanaEspera({ title: "Cargando", message: "Espere un momento" });
+        AbrirVentanaEspera({ title: "Cargando...", message: "Espere un momento por favor" });
         $.getJSON("../ws/WCServicio.svc/ListarFamiliaSelPorCampo",
             {
                 pstrColumna : psColumna,
@@ -26,7 +26,6 @@ function ListarFamiliasSel(psColumna, psValor, piPagina, pbPag) {
             function (resultado) {
                 // Datos simulados que vendrían de una llamada a AJAX
                 var inPaginas = 0;
-                console.log(resultado.Familias.length);
                 if (resultado.Familias.length > 0)
                 {
                     inPaginas = Math.ceil(resultado.Familias[0].TotalFilas / resultado.Familias[0].FilasXPagina);
@@ -34,6 +33,7 @@ function ListarFamiliasSel(psColumna, psValor, piPagina, pbPag) {
                     inPaginas = 1;
                 }
                 $('#selectorFamiliaSel').html(compilado(resultado));
+                //pbPag solo hace a la primera vez o cuando cambia el criterio de busqueda
                 if (pbPag) {
                     $('#selectorFamiliaSelPag').pagination({
                         pages: inPaginas,
@@ -43,16 +43,16 @@ function ListarFamiliasSel(psColumna, psValor, piPagina, pbPag) {
                             // Callback triggered when a page is clicked
                             // Page number is given as an optional parameter
 
-                            var sColumnaNueva = $("#selCampo").val();
-                            var sValorNueva = $("#inValor").val();
-                            if (sColumnaAnterior != sColumnaNueva) {
+                            var sColumnaNueva = $("#selCampoSelectorFamilia").val();
+                            var sValorNueva = $("#inValorSelectorFamilia").val();
+                            if (sColAntSelectorFamilia != sColumnaNueva) {
                                 pageNumber = 1;
                                 ListarFamiliasSel(sColumnaNueva, sValorNueva, pageNumber, true);
                             }
                             else {
                                 ListarFamiliasSel(sColumnaNueva, sValorNueva, pageNumber, false);
                             }
-                            sColumnaAnterior = sColumnaNueva;
+                            sColAntSelectorFamilia = sColumnaNueva;
                         },
                     });
                 }
@@ -66,15 +66,14 @@ function ListarFamiliasSel(psColumna, psValor, piPagina, pbPag) {
 }
 
 
-var vfilaAnterior = null;
-function fnSelecionarFilaFamilia(pFila, pCodigoAlumnoa) {
-    console.log("Prueba ");
-    if (vfilaAnterior != null && pFila != vfilaAnterior) {
-        vfilaAnterior.style.backgroundColor = 'white';
+var vfilaAntSelectorFamilia = null;
+function fnSelecionarFilaSelectorFamilia(pFila, pCodigoAlumnoa) {
+    if (vfilaAntSelectorFamilia != null && pFila != vfilaAntSelectorFamilia) {
+        vfilaAntSelectorFamilia.style.backgroundColor = 'white';
     }
-    vfilaAnterior = pFila;
+    vfilaAntSelectorFamilia = pFila;
     pFila.style.backgroundColor = '#E5E5E5';
-    this.document.getElementById('hdFamilia').value = pCodigoAlumnoa;
+    $("#hdCodigoSelectorFamilia").val(pCodigoAlumnoa);
 }
 
 

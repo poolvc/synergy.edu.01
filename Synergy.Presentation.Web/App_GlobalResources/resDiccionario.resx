@@ -938,4 +938,22 @@
   <data name="TodosFiltro" xml:space="preserve">
     <value>Todos Filtros</value>
   </data>
+  <data name="BuscarPor" xml:space="preserve">
+    <value>Buscar Por</value>
+  </data>
+  <data name="Fila" xml:space="preserve">
+    <value>Fila</value>
+  </data>
+  <data name="Familia" xml:space="preserve">
+    <value>Familia</value>
+  </data>
+  <data name="Alumno" xml:space="preserve">
+    <value>Alumnos</value>
+  </data>
+  <data name="Familias" xml:space="preserve">
+    <value>Familias</value>
+  </data>
+  <data name="Alumnos" xml:space="preserve">
+    <value>Alumnos</value>
+  </data>
 </root>

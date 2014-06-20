@@ -17,18 +17,13 @@ public interface IWCServicio
     //[OperationContract]
     //[WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
 
-    //[OperationContract]
-    //[WebInvoke(Method = "GET",
-    //    ResponseFormat = WebMessageFormat.Json,
-    //    BodyStyle = WebMessageBodyStyle.Wrapped,
-    //    UriTemplate = "GetUrl/{iType}")]
-    //[WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
-    //[OperationContract]
-    //List<BEFamiliaSel> ListarFamiliaSelPorCampo(string pstrColumna, string pstrValor, int pinPagina );
+
+    [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+    [OperationContract]
+    ContenedorFamilia ListarFamiliaSelPorCampo(string pstrColumna, string pstrValor, int pinPagina);
 
 
     [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
     [OperationContract]
-    //List<BEFamiliaSel> ListarFamiliaSelPorCampo();
-    ContenedorFamilia ListarFamiliaSelPorCampo(string pstrColumna, string pstrValor, int pinPagina);
+    ContenedorAlumno ListarAlumnoSelPorCampo(string pstrColumna, string pstrValor, int pinPagina);
  }

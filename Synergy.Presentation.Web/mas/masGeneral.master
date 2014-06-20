@@ -13,13 +13,13 @@
     <link rel="stylesheet" type="text/css" id="lnkMenu" href="../css/menu.css"  />
     <link rel="stylesheet" type="text/css" id="lnkJquery" href="../css/smoothness/jquery.ui.custom.css"  />
 
-    <script language="JavaScript" type="text/javascript" src="../jsc/general.js"></script>
+   
     <script language="JavaScript" type="text/javascript" src="../jsc/jquery.js"></script>
     <script language="JavaScript" type="text/javascript" src="../jsc/jquery.ui.custom.js"></script>
     <script language="JavaScript" type="text/javascript" src="../jsc/jquery.autotab.js"></script>
     <script language="JavaScript" type="text/javascript" src="../jsc/jquery.maskedinput.js"></script>
     <script language="JavaScript" type="text/javascript" src="../jsc/json.js"></script>
-
+    <script language="JavaScript" type="text/javascript" src="../jsc/general.js"></script>
     <title>Galexito</title>
 </head>
 <body id="bodyGeneral"  runat="server">

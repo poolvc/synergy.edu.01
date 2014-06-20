@@ -22,23 +22,13 @@ public class ContenedorFamilia
     public virtual List<BEFamiliaSel> Familias { get; set; }
 }
 
+public class ContenedorAlumno
+{
+    [DataMember]
+    public virtual List<BEAlumnoSel> Alumnos { get; set; }
+}
 public class WCServicio : IWCServicio
 {
-    //public List<BEFamiliaSel> ListarFamiliaSelPorCampo(string pstrColumna, string pstrValor, int pinPagina )
-    //{ 
-    //  BEFamiliaSel be = new BEFamiliaSel()
-    //    {
-    //        Columna = pstrColumna,
-    //        Valor = pstrValor,
-    //        Pagina = pinPagina,
-    //    };
-
-    //    List<BEFamiliaSel> lst = new List<BEFamiliaSel>();
-    //    BLFamiliaSel bl = new BLFamiliaSel();
-    //    lst = bl.ListarPorCampo(be);
-    //    return lst;
-    //}
-
 
     public ContenedorFamilia ListarFamiliaSelPorCampo(string pstrColumna, string pstrValor, int pinPagina)
     {
@@ -49,12 +39,20 @@ public class WCServicio : IWCServicio
             Valor = pstrValor,
             Pagina = pinPagina,
         };
+        bes.Familias = (new BLFamiliaSel()).ListarPorCampo(be);
+        return bes;
+    }
 
-        List<BEFamiliaSel> lst = new List<BEFamiliaSel>();
-        BLFamiliaSel bl = new BLFamiliaSel();
-        lst = bl.ListarPorCampo(be);
-        bes.Familias = lst;
-
+    public ContenedorAlumno ListarAlumnoSelPorCampo(string pstrColumna, string pstrValor, int pinPagina)
+    {
+        ContenedorAlumno bes = new ContenedorAlumno();
+        BEAlumnoSel be = new BEAlumnoSel()
+        {
+            Columna = string.IsNullOrEmpty(pstrColumna) ? "ApellidoPaterno" : pstrColumna,
+            Valor = pstrValor,
+            Pagina = pinPagina,
+        };
+        bes.Alumnos = (new BLAlumnoSel()).ListarPorCampo(be);
         return bes;
     }
 }
