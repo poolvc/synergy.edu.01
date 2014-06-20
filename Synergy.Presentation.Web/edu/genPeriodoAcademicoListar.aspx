@@ -5,6 +5,8 @@
 <%@ Register Src="~/ucx/ucPaginador.ascx" TagName="ucPaginador" TagPrefix="uc1" %>
 <%@ Register Src="~/ucx/ucFamiliaSelector.ascx" TagPrefix="uc1" TagName="ucFamiliaSelector" %>
 <%@ Register Src="~/ucx/ucAlumnoSelector.ascx" TagPrefix="uc1" TagName="ucAlumnoSelector" %>
+<%@ Register Src="~/ucx/ucFichaAtributos.ascx" TagPrefix="uc1" TagName="ucFichaAtributos" %>
+
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphArea" runat="Server">
@@ -60,9 +62,39 @@
             });
                     $('#' + divname).dialog('open');
                     $('#' + divname).parent().appendTo($("form:first"));
+        }
+
+        function AbrirVisorFicha(divname, psPeriodoAcademico, psCodigo, psVinculo, psTipo) {
+            ObtenerFichaAtributos(psPeriodoAcademico, psCodigo, psVinculo, psTipo)
+           
+           
+            $('#' + divname).dialog({
+                autoOpen: false,
+                modal: true,
+                bgiframe: true,
+                title: '<%= Resources.resDiccionario.Ficha %>',
+                width: 500,
+                height: 450,
+                buttons:
+                    {
+                        "Aceptar":
+                            {
+                                text: 'Aceptar',
+                                class: "ui-button",
+                                click: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                    }
+            });
+                    $('#' + divname).dialog('open');
+                    $('#' + divname).parent().appendTo($("form:first"));
                 }
 
     </script>
+
+
+
 
     <div id="filtros">
 
@@ -80,6 +112,17 @@
                      <input  type="button" id="ibFamilias" onclick="javascript: return AbrirSelectorFamilia('selectorConteinerFamilia');"/>
                      <input  type="button" id="ibAlumnos" onclick="javascript: return AbrirSelectorAlumno('selectorConteinerAlumno');"/>
                 </td>
+            </tr>
+            <tr>
+                <td style="width: 3%; text-align: right">
+                    &nbsp;</td>
+                <td style="width: 8%">
+                     <input  type="button" id="ibFichaAlumno" onclick="javascript: return AbrirVisorFicha('visorConteinerFicha', '2012-2013', '0411601', '', 'A');"/>
+                     <input  type="button" id="ibFichaFamilia" onclick="javascript: return AbrirVisorFicha('visorConteinerFicha', '2012-2013', '04430', 'Mother','F');"/>
+                     <input  type="button" id="ibFichaEmpleado" onclick="javascript: return AbrirVisorFicha('visorConteinerFicha', '2012-2013', '480', '', 'E');"/>
+                </td>
+                <td>
+                    &nbsp;</td>
             </tr>
         </table>
     </div>
@@ -171,6 +214,8 @@
      <div id="selectorConteinerAlumno" style="display: none; font-size: 90%;">
             <uc1:ucAlumnoSelector runat="server" ID="ucAlumnoSelector" />
      </div>
-    
+     <div id="visorConteinerFicha" style="display: none; font-size: 90%;">
+           <uc1:ucFichaAtributos runat="server" id="ucFichaAtributos" />
+     </div>
     <div id="loadingScreen"> </div>
 </asp:Content>

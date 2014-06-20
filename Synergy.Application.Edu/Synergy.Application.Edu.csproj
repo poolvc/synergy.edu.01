@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edu\BLFicha.cs" />
     <Compile Include="Edu\BLEmpleado.cs" />
     <Compile Include="Edu\BLAlumnoSel.cs" />
     <Compile Include="Edu\BLFamiliaSel.cs" />

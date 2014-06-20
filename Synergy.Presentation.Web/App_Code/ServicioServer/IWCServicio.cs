@@ -26,4 +26,8 @@ public interface IWCServicio
     [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
     [OperationContract]
     ContenedorAlumno ListarAlumnoSelPorCampo(string pstrColumna, string pstrValor, int pinPagina);
+
+    [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+    [OperationContract]
+    ContenedorFicha ObtenerFichaPorAtributo(string pstrPeriodoAcademico, string pstrCodigo, string pstrVinculo, string pstrTipo);
  }

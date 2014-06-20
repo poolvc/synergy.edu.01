@@ -956,4 +956,13 @@
   <data name="Alumnos" xml:space="preserve">
     <value>Alumnos</value>
   </data>
+  <data name="Ficha" xml:space="preserve">
+    <value>Ficha</value>
+  </data>
+  <data name="Atributo" xml:space="preserve">
+    <value>Atributo</value>
+  </data>
+  <data name="Propiedad" xml:space="preserve">
+    <value>Propiedad</value>
+  </data>
 </root>

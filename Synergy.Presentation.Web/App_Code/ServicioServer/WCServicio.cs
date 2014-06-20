@@ -27,6 +27,16 @@ public class ContenedorAlumno
     [DataMember]
     public virtual List<BEAlumnoSel> Alumnos { get; set; }
 }
+
+
+public class ContenedorFicha
+{
+    [DataMember]
+    public virtual List<BEFicha> Atributos { get; set; }
+
+
+}
+
 public class WCServicio : IWCServicio
 {
 
@@ -53,6 +63,34 @@ public class WCServicio : IWCServicio
             Pagina = pinPagina,
         };
         bes.Alumnos = (new BLAlumnoSel()).ListarPorCampo(be);
+        return bes;
+    }
+
+
+    public ContenedorFicha ObtenerFichaPorAtributo(string pstrPeriodoAcademico, string pstrCodigo, string pstrVinculo, string pstrTipo)
+    {
+        ContenedorFicha bes = new ContenedorFicha();
+        BEFicha be = new BEFicha()
+        {
+            PeriodoAcademico = pstrPeriodoAcademico,
+        };
+        BLFicha bl = new BLFicha();
+        switch (pstrTipo)
+        {
+            case "A":
+                be.CodigoAlumno = pstrCodigo;
+                bes.Atributos = bl.ObtnerAlumnoPorAtributo(be);
+                break;
+            case "F":
+                be.AlumnoGrupo = pstrCodigo;
+                be.Vinculo = pstrVinculo;
+                bes.Atributos = bl.ObtnerFamiliaPorAtributo(be);
+                break;
+            case "E":
+                be.CodigoEmpleado = pstrCodigo;
+                bes.Atributos = bl.ObtnerEmpleadoPorAtributo(be);
+                break;
+        }
         return bes;
     }
 }

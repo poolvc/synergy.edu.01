@@ -63,6 +63,7 @@
     <Compile Include="Comun\MapData.cs" />
     <Compile Include="Edu\DLEmpleado.cs" />
     <Compile Include="Edu\DLAlumnoSel.cs" />
+    <Compile Include="Edu\DLFicha.cs" />
     <Compile Include="Edu\DLFamiliaSel.cs" />
     <Compile Include="Edu\DLPeriodoAcademico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
