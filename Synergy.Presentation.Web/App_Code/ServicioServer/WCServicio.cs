@@ -45,7 +45,7 @@ public class WCServicio : IWCServicio
         ContenedorFamilia bes = new ContenedorFamilia();
         BEFamiliaSel be = new BEFamiliaSel()
         {
-            Columna = pstrColumna,
+            Columna =  string.IsNullOrEmpty(pstrColumna) ? "ApellidoPaterno" : pstrColumna,
             Valor = pstrValor,
             Pagina = pinPagina,
         };

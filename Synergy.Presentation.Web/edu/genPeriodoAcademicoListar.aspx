@@ -6,47 +6,37 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphArea" runat="Server">
 
-    <!--link href="../Content/bootstrap.min.css" rel="stylesheet" /-->
-    
+    <link href="../Content/simplePagination.css" rel="stylesheet" />
     <script type="text/javascript" src="../Scripts/underscore-min.js"></script>
     <script type="text/javascript" src="../Scripts/base/modTemplate.js"></script>
     <script src="../Scripts/jquery.simplePagination.js"></script>
 
     <script type="text/javascript">
 
-        $(document).ready(function () {
-
-            var compilado = _.template($('#listaFamiliaSel').html());
-            console.log("Prueba 1");
-            $.getJSON("../ws/WCServicio.svc/ListarFamiliaSelPorCampo",
-                {
-                    pstrColumna: "ApellidoPaterno",
-                    pstrValor: "AB",
-                    pinPagina:1
-                },
-
-                function (resultado) {
-                    // Datos simulados que vendrían de una llamada a AJAX
-                    console.log("Prueba 2");
-                    // Ejecutamos la funcion compilado y le pasamos la colección
-                    // que queremos que use y el HTML generado lo ponemos el DOM
-                    // con jQuery
-                    $('#selectorFamiliaSel').html(compilado(resultado));
-
-
-                    $('#selectorFamiliaSelPag').pagination({
-                        pages: 5,
-                        cssStyle: 'compact-theme',
-                        displayedPages: 3
-                    });
-
-                })
-                .success(function () { })
-                .error(function (result) { alert('Error ' + '\n[ Code ' + result.status + ' 004 ]'); })
-                .complete(function () { });
-
-        });
-
+        function AbrirSelectorFamilia(divname) {
+            var inPaginas = 1;
+            $('#' + divname).dialog({
+                    autoOpen: false,
+                    modal: true,
+                    bgiframe: true,
+                    title: '<%= Resources.resDiccionario.Seleccion %>',
+                    width: 800,
+                    height: 450,
+                    buttons:
+                        {
+                            "Aceptar": function () {
+                                document.getElementById('<%= txtFamilia.ClientID %>').value = document.getElementById("hdFamilia").value;
+                                $(this).dialog("close");
+                            },
+                            "Cancelar": function () {
+                                $(this).dialog("close");
+                                //cancel
+                            }
+                        }
+                     });
+                    $('#' + divname).dialog('open');
+                    $('#' + divname).parent().appendTo($("form:first"));
+        }
 
 
 
@@ -65,7 +55,8 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtFamilia" runat="server"></asp:TextBox>
-                    <img alt="Add" src="../img/ico_add.gif" style="width: 30px; height: 30px" /></td>
+                     <input  type="button" id="ibFamilias" onclick="javascript: return AbrirSelectorFamilia('selectorConteiner');"/>
+                </td>
             </tr>
         </table>
     </div>
@@ -151,28 +142,74 @@
         </div>
     </div>
 
-    <div id="selectorFamiliaSel">
-     </div>
-    <div id="selectorFamiliaSelPag"></div>
-
+    <div id="selectorConteiner" style="display: none; font-size: 90%;">
+        <div id="selectorFamiliaFiltro">
+            <table class="filtro_bar">
+                <tr>
+                    <td style="width: 5%">
+                        <asp:Label ID="lblCodigoCentroCosto" runat="server" Text="<%$ Resources:resDiccionario, Codigo %>"></asp:Label>:
+                    </td>
+                    <td style="width: 5%">
+                         <select id="selCampo">
+                            <option value="ApellidoPaterno">Apellido Paterno</option>
+                            <option value="ApellidoMaterno">Apellido Materno</option>
+                            <option value="AlumnoGrupo">Codigo Familia</option>
+                        </select>
+                    </td>
+                   
+                    <td style="width: 5%">
+                        <asp:Label ID="lblDescripcion" runat="server" Text="<%$ Resources:resDiccionario, Descripcion %>"></asp:Label>:
+                    </td>
+                    <td style="width: 5%">
+                        <input type="text" id="inValor"/>
+                    </td>
+                   
+                    <td>
+                       
+                        <img alt="Buscar" src="../img/ico_buscar4.gif" onclick="BuscarFamiliasSel();"  />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="selectorFamiliaSel">
+         </div>
+        <div id="selectorFamiliaSelPag" style="position:absolute; bottom:0;"></div>
+        <input type="hidden" id="hdFamilia" />
+    </div>
     <script type="text/template" id="listaFamiliaSel">
+
       <table class="lista">
         <tr>
-           <th>Nombre</th>
-           <th>Nombre</th>
-           <th>Edad</th>
+           <th style="width: 5%">Fila</th> 
+           <th style="width: 10%">Codigo</th>
+           <th style="width: 30%">Apellido Paterno</th>
+           <th style="width: 30%">Apellido Materno</th>
+           <th>Estado</th>
         </tr>
-        <@ _.each(Familias, function(Familia) { @>
-          <tr onclick="fnSelecionarFilaFamilia(this,'<@ print(Familia.AlumnoGrupo); @>');"" >
-            <td><@ print(Familia.AlumnoGrupo); @></td>
-            <td><@ print(Familia.ApellidoPaterno); @></td>
-            <td><@ print(Familia.ApellidoMaterno); @></td>
-          </tr>
-        <@ }); @>
+       <@ if(Familias.length>0) { @>
+             <@ _.each(Familias, function(Familia) { @>
+                  <tr onclick="fnSelecionarFilaFamilia(this,'<@ print(Familia.AlumnoGrupo); @>');"" >
+                    <td><@ print(Familia.Fila); @></td> 
+                    <td><@ print(Familia.AlumnoGrupo); @></td>
+                    <td><@ print(Familia.ApellidoPaterno); @></td>
+                    <td><@ print(Familia.ApellidoMaterno); @></td>
+                     <@ if(Familias.Estado = "S") { @>
+                        <td>Activo</td>
+                      <@ }else { @>
+                        <td>Inactivo</td>
+                      <@ } @>
+                  </tr>
+            <@ }); @>
+        <@ }else { @>
+             <tr>
+               <td colspan="3"> <%= Resources.resDiccionario.NoHayRegistros %></td>
+            </tr>
+        <@ } @>
+
       </table>
     </script>    
   
 
-    <link href="../Content/simplePagination.css" rel="stylesheet" />
-
+    
+    <div id="loadingScreen"> </div>
 </asp:Content>

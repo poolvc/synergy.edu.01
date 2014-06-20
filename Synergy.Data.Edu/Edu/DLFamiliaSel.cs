@@ -37,11 +37,13 @@ namespace Synergy.Data.Edu
                     {
                         BEFamiliaSel be = new BEFamiliaSel
                         {
+
                             AlumnoGrupo = DBValue.Get<string>(reader, "AlumnoGrupo"),
                             ApellidoPaterno = DBValue.Get<string>(reader, "ApellidoPaterno"),
                             ApellidoMaterno = DBValue.Get<string>(reader, "ApellidoMaterno"),
                             Estado = DBValue.Get<String>(reader, "Estado"),
 
+                            Fila = DBValue.Get<int>(reader, "Fila"),
                             FilasXPagina = DBValue.Get<int>(reader, "FilasXPagina"),
                             TotalFilas = DBValue.Get<int>(reader, "TotalFilas"),
                         };

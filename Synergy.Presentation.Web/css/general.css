@@ -3079,3 +3079,22 @@ span.error
     font-weight: bold;
     color: #FF0000;
 }
+
+
+#loadingScreen
+{
+    font-size: 11px;
+    background: url(../img/ico_cargando.gif) no-repeat 5px 5px;
+    padding-left: 25px;
+}
+	
+/* hide the close x on the loading screen */	
+.loadingScreenWindow .ui-dialog-titlebar-close
+{
+    display: none;
+}	
+
+.ui-dialog .ui-dialog-titlebar
+{
+    background-color: #CCCCCC;
+}
