@@ -54,7 +54,7 @@
                 <td><@ print(Familia.AlumnoGrupo); @></td>
                 <td><@ print(Familia.ApellidoPaterno); @></td>
                 <td><@ print(Familia.ApellidoMaterno); @></td>
-                    <@ if(Familias.Estado = "S") { @>
+                    <@ if(Familia.Estado == "A") { @>
                    <td><%= Resources.resDiccionario.Activo %></td>
                     <@ }else { @>
                     <td><%= Resources.resDiccionario.Inactivo %></td>

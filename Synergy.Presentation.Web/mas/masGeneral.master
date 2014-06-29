@@ -20,7 +20,7 @@
     <script language="JavaScript" type="text/javascript" src="../jsc/jquery.maskedinput.js"></script>
     <script language="JavaScript" type="text/javascript" src="../jsc/json.js"></script>
     <script language="JavaScript" type="text/javascript" src="../jsc/general.js"></script>
-    <title>Galexito</title>
+    <title>Synergy - Educativo</title>
 </head>
 <body id="bodyGeneral"  runat="server">
     <form id="form1" runat="server">

@@ -39,10 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edu\BLAlumnos.cs" />
+    <Compile Include="Edu\BLFamilia.cs" />
     <Compile Include="Edu\BLFicha.cs" />
     <Compile Include="Edu\BLEmpleado.cs" />
     <Compile Include="Edu\BLAlumnoSel.cs" />
     <Compile Include="Edu\BLFamiliaSel.cs" />
+    <Compile Include="Edu\BLGrado.cs" />
     <Compile Include="Edu\BLPeriodoAcademico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -67,7 +67,7 @@ public class WCServicio : IWCServicio
     }
 
 
-    public ContenedorFicha ObtenerFichaPorAtributo(string pstrPeriodoAcademico, string pstrCodigo, string pstrVinculo, string pstrTipo)
+    public ContenedorFicha ObtenerFichaPorAtributo(string pstrPeriodoAcademico, string pstrCodigo, string pstrVinculo, string pstrDocumentoIdentidad , string pstrTipo)
     {
         ContenedorFicha bes = new ContenedorFicha();
         BEFicha be = new BEFicha()
@@ -84,6 +84,7 @@ public class WCServicio : IWCServicio
             case "F":
                 be.AlumnoGrupo = pstrCodigo;
                 be.Vinculo = pstrVinculo;
+                be.DocumentoIdentidad = pstrDocumentoIdentidad;
                 bes.Atributos = bl.ObtnerFamiliaPorAtributo(be);
                 break;
             case "E":

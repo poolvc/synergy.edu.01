@@ -10,6 +10,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
+using Synergy.Presentation.Web;
 
 public partial class ucPaginador : System.Web.UI.UserControl
 {
@@ -80,6 +81,13 @@ public partial class ucPaginador : System.Web.UI.UserControl
         get { return lblTotalRegistros; }
         set { lblTotalRegistros = value; }
     }
+
+    private Utilitarios _util = new Utilitarios();
+    public Utilitarios Util
+    {
+        get { return _util; }
+    }
+
     /// <summary>
     /// Evento que se lanza cuando se cambia de página en el paginador.
     /// </summary>
@@ -129,6 +137,7 @@ public partial class ucPaginador : System.Web.UI.UserControl
         upnPaginador.Update();
         if (CambioPagina != null)
             CambioPagina(this, EventArgs.Empty);
+        Util.ejecutaScriptAJAX(this.Page, string.Format("CerrarVentanaEspera();"));
     }
 
     #endregion

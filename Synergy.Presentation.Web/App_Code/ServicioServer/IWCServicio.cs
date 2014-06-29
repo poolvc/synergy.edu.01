@@ -29,5 +29,5 @@ public interface IWCServicio
 
     [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
     [OperationContract]
-    ContenedorFicha ObtenerFichaPorAtributo(string pstrPeriodoAcademico, string pstrCodigo, string pstrVinculo, string pstrTipo);
+    ContenedorFicha ObtenerFichaPorAtributo(string pstrPeriodoAcademico, string pstrCodigo, string pstrVinculo,string pstrDocumentoIdentidad, string pstrTipo);
  }

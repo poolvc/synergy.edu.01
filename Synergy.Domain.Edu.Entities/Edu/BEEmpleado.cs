@@ -9,6 +9,8 @@ namespace Synergy.Domain.Edu.Entities
     public class BEEmpleado : BEEntidad
     {
         [DataMember]
+        public virtual string PeriodoAcademico { get; set; }
+        [DataMember]
         public virtual int IdEmpleado { get; set; }
         [DataMember]
         public virtual string EmpleadoNombre { get; set; }
@@ -108,7 +110,10 @@ namespace Synergy.Domain.Edu.Entities
         [DataMember]
         public virtual int? IdLineaCarrera { get; set; }
         [DataMember]
-        public virtual Byte[] Foto { get; set; }
+        public virtual string Foto { get; set; }
+        [DataMember]
+        public virtual string Exportado { get; set; }
+            
     }
 }
 

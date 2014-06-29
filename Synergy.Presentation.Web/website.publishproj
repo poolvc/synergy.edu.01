@@ -21,7 +21,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     <SourceWebVirtualPath>/Synergy.Presentation.Web</SourceWebVirtualPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SourceWebProject>http://localhost:30021</SourceWebProject>
-    <SourceWebMetabasePath>/IISExpress/7.5/LM/W3SVC/42/ROOT</SourceWebMetabasePath>
+    <SourceWebMetabasePath>/IISExpress/7.5/LM/W3SVC/4/ROOT</SourceWebMetabasePath>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -42,9 +42,21 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Synergy.Presentation.ServiceAgent.Proxy\Synergy.Presentation.ServiceAgent.Proxy.csproj">
-      <Project>{CF4A4325-F770-498D-A872-4782491D9C74}</Project>
-      <Name>Synergy.Presentation.ServiceAgent.Proxy</Name>
+    <ProjectReference Include="..\Synergy.Application.Edu\Synergy.Application.Edu.csproj">
+      <Project>{5A5C8582-B3AA-4C7C-ABFC-AB37E75DD740}</Project>
+      <Name>Synergy.Application.Edu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Synergy.Data.Edu\Synergy.Data.Edu.csproj">
+      <Project>{A5473E0E-C290-4AD5-A415-FF3C5E6106A9}</Project>
+      <Name>Synergy.Data.Edu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Synergy.Domain.Edu.Entities\Synergy.Domain.Edu.Entities.csproj">
+      <Project>{95384627-8CA1-4A44-84DB-27D9334B41B5}</Project>
+      <Name>Synergy.Domain.Edu.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Synergy.Infraestructure.CrossCutting\Synergy.Infraestructure.CrossCutting.csproj">
+      <Project>{3EB29220-04A9-4B3F-89C8-1EC59F93C37B}</Project>
+      <Name>Synergy.Infraestructure.CrossCutting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(_WebPublishTargetsPath)\Web\Microsoft.WebSite.Publishing.targets" />

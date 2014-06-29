@@ -46,7 +46,7 @@ namespace Synergy.Data.Edu
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw;
             }
@@ -72,6 +72,7 @@ namespace Synergy.Data.Edu
                 dbCmd.CommandTimeout = CadenaConexion.CommandTimeout;
                 sqlDB.AddInParameter(dbCmd, "@as_PeriodoAcademico", DbType.String, pbe.PeriodoAcademico);
                 sqlDB.AddInParameter(dbCmd, "@as_AlumnoGrupo", DbType.String, pbe.AlumnoGrupo);
+                sqlDB.AddInParameter(dbCmd, "@as_DocumentoIdentidad", DbType.String, pbe.DocumentoIdentidad);
                 sqlDB.AddInParameter(dbCmd, "@as_Vinculo", DbType.String, pbe.Vinculo);
                 using (IDataReader reader = sqlDB.ExecuteReader(dbCmd))
                 {
@@ -89,7 +90,7 @@ namespace Synergy.Data.Edu
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw;
             }
@@ -131,7 +132,7 @@ namespace Synergy.Data.Edu
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw;
             }

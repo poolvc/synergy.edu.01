@@ -79,6 +79,112 @@ namespace Synergy.Data.Edu
             return ds;
         }
 
+        public DataSet Listar(BEEmpleado pbe)
+        {
+            DataSet ds = new DataSet();
+            SqlDatabase sqlDB = new SqlDatabase(CadenaConexion.Obtener());
+            DbCommand dbCmd = sqlDB.GetStoredProcCommand("[uSP_Syn_ED_Empleado_Fotocheck_Listar]");
+
+            sqlDB.AddInParameter(dbCmd, "@as_PeriodoAcademico", DbType.String, pbe.PeriodoAcademico);
+            sqlDB.AddInParameter(dbCmd, "@as_Foto", DbType.String, pbe.Foto);
+            sqlDB.AddInParameter(dbCmd, "@as_Exportado", DbType.String, pbe.Exportado);
+            sqlDB.AddInParameter(dbCmd, "@ai_Pagina", DbType.Int32, pbe.Pagina);
+
+            try
+            {
+                dbCmd.CommandTimeout = CadenaConexion.CommandTimeout;
+                ds = sqlDB.ExecuteDataSet(dbCmd);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbCmd.Dispose();
+            }
+            return ds;
+        }
+
+        public BEEmpleado Insertar(string strCodigo, string pstrPeriodoAcademico, string pstrUsuarioCreacion)
+        {
+            BEEmpleado be = new BEEmpleado();
+
+            SqlDatabase sqlDB = new SqlDatabase(CadenaConexion.Obtener());
+            DbCommand dbCmd = sqlDB.GetStoredProcCommand("uSP_Syn_ED_Empleado_Fotocheck_Procesar");
+
+            try
+            {
+                dbCmd.CommandTimeout = CadenaConexion.CommandTimeout;
+
+                sqlDB.AddInParameter(dbCmd, "@as_codigo", DbType.String, strCodigo);
+                sqlDB.AddInParameter(dbCmd, "@as_PeriodoAcademico", DbType.String, pstrPeriodoAcademico);
+                sqlDB.AddInParameter(dbCmd, "@as_UsuarioCreacion", DbType.String, pstrUsuarioCreacion);
+                using (IDataReader reader = sqlDB.ExecuteReader(dbCmd))
+                {
+                    while (reader.Read())
+                    {
+                        //Error
+                        be.Error = DBValue.Get<Int32>(reader, "CodigoError");
+                        be.Mensaje = DBValue.Get<String>(reader, "MensajeError");
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dbCmd.Dispose();
+            }
+
+            return be;
+        }
+
+        public BEEmpleado InsetarMasivo(BEEmpleado pbe)
+        {
+            BEEmpleado be = new BEEmpleado();
+
+            SqlDatabase sqlDB = new SqlDatabase(CadenaConexion.Obtener());
+            DbCommand dbCmd = sqlDB.GetStoredProcCommand("uSP_Syn_ED_Empleado_Fotocheck_ProcesarMasivo");
+
+            try
+            {
+                dbCmd.CommandTimeout = CadenaConexion.CommandTimeout;
+
+                sqlDB.AddInParameter(dbCmd, "@as_PeriodoAcademico", DbType.String, pbe.PeriodoAcademico);
+                sqlDB.AddInParameter(dbCmd, "@as_Foto", DbType.String, pbe.Foto);
+                sqlDB.AddInParameter(dbCmd, "@as_Exportado", DbType.String, pbe.Exportado);
+                sqlDB.AddInParameter(dbCmd, "@as_Codigo", DbType.String, pbe.Codigo);
+                sqlDB.AddInParameter(dbCmd, "@as_UsuarioCreacion", DbType.String, pbe.UsuarioCreacion);
+
+                using (IDataReader reader = sqlDB.ExecuteReader(dbCmd))
+                {
+                    while (reader.Read())
+                    {
+
+                         
+                        //Error
+                        be.Error = DBValue.Get<Int32>(reader, "CodigoError");
+                        be.Mensaje = DBValue.Get<String>(reader, "MensajeError");
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dbCmd.Dispose();
+            }
+
+            return be;
+        }
+
         #endregion  Members
     }
 }

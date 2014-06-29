@@ -4,6 +4,7 @@
 <script type="text/javascript">
     function <%= this.ClientID %>_Paginar(tipo)
     {
+        AbrirVentanaEspera({ title: "Cargando...", message: "Espere un momento por favor" });
         document.getElementById('<%= hdTipoPaginacion.ClientID %>').value=tipo;
         document.getElementById('<%= btnPaginacion.ClientID %>').click();
     }

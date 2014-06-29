@@ -621,7 +621,6 @@
   </data>
   <data name="Venta" xml:space="preserve">
     <value>Venta</value>
-    <comment>GALEXITO</comment>
   </data>
   <data name="CuentaAjuste" xml:space="preserve">
     <value>Cuenta Ajuste</value>
@@ -679,7 +678,6 @@
   </data>
   <data name="ValorVenta" xml:space="preserve">
     <value>Valor Venta</value>
-    <comment>GALEXITO</comment>
   </data>
   <data name="Ajuste" xml:space="preserve">
     <value>Ajuste</value>
@@ -833,7 +831,6 @@
   </data>
   <data name="Vigente" xml:space="preserve">
     <value>Vigente</value>
-    <comment>GALEXITO</comment>
   </data>
   <data name="Seleccionar" xml:space="preserve">
     <value>Seleccionar</value>
@@ -938,31 +935,73 @@
   <data name="TodosFiltro" xml:space="preserve">
     <value>Todos Filtros</value>
   </data>
-  <data name="BuscarPor" xml:space="preserve">
-    <value>Buscar Por</value>
+  <data name="Alumno" xml:space="preserve">
+    <value>Alumno</value>
   </data>
-  <data name="Fila" xml:space="preserve">
-    <value>Fila</value>
+  <data name="Apellidos" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="Exportado" xml:space="preserve">
+    <value>Exportado</value>
   </data>
   <data name="Familia" xml:space="preserve">
     <value>Familia</value>
   </data>
-  <data name="Alumno" xml:space="preserve">
-    <value>Alumnos</value>
+  <data name="Foto" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="Grado" xml:space="preserve">
+    <value>Grado</value>
+  </data>
+  <data name="LugarNacimiento" xml:space="preserve">
+    <value>LugarNacimiento</value>
+  </data>
+  <data name="Programa" xml:space="preserve">
+    <value>Programa</value>
+  </data>
+  <data name="Rol" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="Seccion" xml:space="preserve">
+    <value>Seccion</value>
+  </data>
+  <data name="Empleados" xml:space="preserve">
+    <value>Empleados</value>
   </data>
   <data name="Familias" xml:space="preserve">
     <value>Familias</value>
   </data>
+  <data name="SelTodo" xml:space="preserve">
+    <value>SelTodo</value>
+  </data>
+  <data name="CodigoEmpleado" xml:space="preserve">
+    <value>CodigoEmpleado</value>
+  </data>
+  <data name="CodigoFamilia" xml:space="preserve">
+    <value>CodigoFamilia</value>
+  </data>
+  <data name="PaisNacimiento" xml:space="preserve">
+    <value>Pais Nacimiento</value>
+  </data>
+  <data name="Vinculo" xml:space="preserve">
+    <value>Vinculo</value>
+  </data>
   <data name="Alumnos" xml:space="preserve">
     <value>Alumnos</value>
+  </data>
+  <data name="BuscarPor" xml:space="preserve">
+    <value>Buscar Por</value>
   </data>
   <data name="Ficha" xml:space="preserve">
     <value>Ficha</value>
   </data>
-  <data name="Atributo" xml:space="preserve">
-    <value>Atributo</value>
-  </data>
   <data name="Propiedad" xml:space="preserve">
     <value>Propiedad</value>
+  </data>
+  <data name="Ver" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="FechaProceso" xml:space="preserve">
+    <value>Fecha Proceso</value>
   </data>
 </root>

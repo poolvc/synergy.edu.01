@@ -29,5 +29,29 @@ namespace Synergy.Application.Edu
             return _dlEmpleado.Listar_Repetido(pbe);
         }
 
+        public DataSet Listar(BEEmpleado pbe)
+        {
+            return _dlEmpleado.Listar(pbe);
+        }
+        public BEEmpleado Insetar(List<string> mLista, string pstrPeriodoAcademico, string pstrUsuarioCreacion)
+        {
+            BEEmpleado pbe = new BEEmpleado();
+
+            for (int i = 0; i < mLista.Count; i++)
+            {
+                pbe = _dlEmpleado.Insertar(mLista[i].ToString(), pstrPeriodoAcademico, pstrUsuarioCreacion);
+            }
+
+            return pbe;
+        }
+
+        public BEEmpleado InsetarMasivo(BEEmpleado obe)
+        {
+            BEEmpleado pbe = new BEEmpleado();
+            pbe = _dlEmpleado.InsetarMasivo(obe);
+            return pbe;
+        }
+
+
     }
 }

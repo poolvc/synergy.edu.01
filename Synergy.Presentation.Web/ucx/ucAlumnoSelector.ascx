@@ -60,7 +60,7 @@
                 <td><@ print(Alumno.ApellidoMaterno); @></td>
                 <td><@ print(Alumno.Nombre01); @></td>
                 <td><@ print(Alumno.Sexo); @></td>
-                <@ if(Alumnos.Estado = "S") { @>
+                <@ if(Alumnos.Estado == "A") { @>
                     <td><%= Resources.resDiccionario.Activo %></td>
                     <@ }else { @>
                     <td><%= Resources.resDiccionario.Inactivo %></td>

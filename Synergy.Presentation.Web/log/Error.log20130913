@@ -1,9 +1,0 @@
-
- ******************** 
- 2013-09-13 14:54:24,102 ERROR 5 gescon.logger - Error en la aplicación:System.Net.WebException: No es posible conectar con el servidor remoto ---> System.Net.Sockets.SocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:1944
-   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-   --- Fin del seguimiento de la pila de la excepción interna ---
-   en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
-   en System.Net.HttpWebRequest.GetRequestStream()
-   en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream() 

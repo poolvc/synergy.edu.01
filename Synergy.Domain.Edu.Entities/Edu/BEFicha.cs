@@ -25,8 +25,8 @@ namespace Synergy.Domain.Edu.Entities
         public virtual string Vinculo { get; set; }
         [DataMember]
         public virtual string CodigoEmpleado { get; set; }
-
-        
+        [DataMember]
+        public virtual string DocumentoIdentidad { get; set; }
     }
 }
 
