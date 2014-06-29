@@ -57,6 +57,11 @@ public partial class masMantEditar : System.Web.UI.MasterPage
         get { return this.ibtEjecutar; }
     }
 
+    public ImageButton MenuExportar
+    {
+        set { this.ibtExportar = value; }
+        get { return this.ibtExportar; }
+    }
     public HtmlGenericControl BodyTagMantEdit
     {
         set { this.Master.BodyTagMant = value; }
@@ -101,20 +106,18 @@ public partial class masMantEditar : System.Web.UI.MasterPage
     {
         if (MenuAccionEvento != null)
         {
-            MenuAccionEvento(this, e);
-            //if (e.CommandName != "Cancelar")
-            //{
-            //    if (this.Page.IsValid)
-            //    {
-            //        MenuAccionEvento(this, e);
-            //    }
-            //}
-            //else
-            //{
-            //    //Invokes the delegates.
-            //    MenuAccionEvento(this, e);
-            //}
-
+            if (e.CommandName != "Cancelar")
+            {
+                if (this.Page.IsValid)
+                {
+                    MenuAccionEvento(this, e);
+                }
+            }
+            else
+            {
+                //Invokes the delegates.
+                MenuAccionEvento(this, e);
+            }
         }
     }
 

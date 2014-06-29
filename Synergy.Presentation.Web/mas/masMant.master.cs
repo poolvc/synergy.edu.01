@@ -7,15 +7,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using Synergy.Presentation.Web;
-using Synergy.Infraestructure.CrossCutting;
 
 public partial class masMant : System.Web.UI.MasterPage
 {
+
     #region CONSTANTES
 
     private const string CONTENIDO_SITIOCONFIG = "SITIOCONF";
     private const string CONTENIDO_SITIOCONFIG_SETDEVEL = "SETDEVEL";
-    private const string CONTENIDO_SITIOCONFIG_GALEXITO = "GALEXITO";
+    private const string CONTENIDO_SITIOCONFIG_Evercom = "Evercom";
     private const string CONTENIDO_SITIOCONFIG_MSNET = "MSNET";
     private const string CONTENIDO_SITIOCONFIG_MSSQL = "MSSQL";
     private const string CONTENIDO_SITIOCONFIG_REDSOCIAL1 = "REDSOCIAL1";
@@ -23,6 +23,7 @@ public partial class masMant : System.Web.UI.MasterPage
 
     #endregion
     
+
     #region Public Properties
 
     private Utilitarios _util = new Utilitarios();
@@ -179,8 +180,8 @@ public partial class masMant : System.Web.UI.MasterPage
         lblUsuario.Text = pbeUsu.CodigoUsuario.ToUpper();
 
         //CargarIdioma
-        Util.loadCombo(ddlIdioma, ListarParametroDetalle(1, 1, Constantes.PARAMETRO_IDIOMASGALEX), "Descripcion", "ParametroDetalle");
-        Util.SelecionaItemCombo(ddlIdioma, pbeUsu.CodigoIdioma);
+        //Util.loadCombo(ddlIdioma, ListarParametroDetalle(1, 1, Constantes.PARAMETRO_IDIOMASGALEX), "Descripcion", "ParametroDetalle");
+        //Util.SelecionaItemCombo(ddlIdioma, pbeUsu.CodigoIdioma);
 
     }
 
@@ -194,12 +195,12 @@ public partial class masMant : System.Web.UI.MasterPage
             aHtmUrlDevel.HRef = arrdr[0]["Url"].ToString();
             aHtmUrlDevel.InnerText = arrdr[0]["Titulo"].ToString();
         }
-        arrdr = dt.Select(string.Format("CodigoContenido='{0}'", CONTENIDO_SITIOCONFIG_GALEXITO));
+        arrdr = dt.Select(string.Format("CodigoContenido='{0}'", CONTENIDO_SITIOCONFIG_Evercom));
         if (arrdr.Length > 0)
         {
-            aHtmUrlGalex.HRef = arrdr[0]["Url"].ToString();
-            aHtmUrlGalex.InnerHtml = arrdr[0]["Titulo"].ToString();
-            aHtmUrlGalex.InnerText = arrdr[0]["Titulo"].ToString();
+            aHtmUrlEmpresa.HRef = arrdr[0]["Url"].ToString();
+            aHtmUrlEmpresa.InnerHtml = arrdr[0]["Titulo"].ToString();
+            aHtmUrlEmpresa.InnerText = arrdr[0]["Titulo"].ToString();
 
             aHtmlCont.HRef = "mailto:" + arrdr[0]["TextoIntro"].ToString();
             aHtmlCont.InnerHtml = arrdr[0]["TextoIntro"].ToString();
@@ -242,7 +243,24 @@ public partial class masMant : System.Web.UI.MasterPage
         }
     }
 
+
     #region LLAMDAS A WEBSERVICES
+
+    //<summary>
+    //Método Obtiene la Aplicacion
+    //</summary>
+    //<returns>Devuelve un Objeto</returns>
+
+    protected DataTable ListarContenidoPorSeccionCodigo(string pstrCodigoSeccion)
+    {
+        WCContenido.BEContenido be = new WCContenido.BEContenido() { CodigoSeccion = pstrCodigoSeccion };
+        DataTable dt = null;
+        using (var client = new ServiceClient<WCContenido.IWCContenido>("BasicHttpBinding_IWCContenido"))
+        {
+            dt = client.ServiceOperation<DataTable>(c => c.ListarPorSeccionCodigo(be).Tables[0]);
+        }
+        return dt;
+    }
 
     /// <summary>
     /// Método Obtiene la Aplicacion
@@ -275,22 +293,6 @@ public partial class masMant : System.Web.UI.MasterPage
         {
             var response = client.ServiceOperation<DataTable>(c => c.Listar(be).Tables[0]);
             dt = response;
-        }
-        return dt;
-    }
-
-    //<summary>
-    //Método Obtiene la Aplicacion
-    //</summary>
-    //<returns>Devuelve un Objeto</returns>
-
-    protected DataTable ListarContenidoPorSeccionCodigo(string pstrCodigoSeccion)
-    {
-        WCContenido.BEContenido be = new WCContenido.BEContenido() { CodigoSeccion = pstrCodigoSeccion };
-        DataTable dt = null;
-        using (var client = new ServiceClient<WCContenido.IWCContenido>("BasicHttpBinding_IWCContenido"))
-        {
-            dt = client.ServiceOperation<DataTable>(c => c.ListarPorSeccionCodigo(be).Tables[0]);
         }
         return dt;
     }

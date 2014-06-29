@@ -10,6 +10,7 @@ function BuscarAlumnosSel() {
     ListarAlumnosSel(sColumna, sValor, iPagina, true);
 }
 
+
 function ListarAlumnosSel(psColumna, psValor, piPagina, pbPag) {
     
     $(document).ready(function () {

@@ -229,13 +229,8 @@
                                     <div class="contents">
                                         <table class="forma" width="100%">
                                             <colgroup width="100%">
-                                                <col width="10%" style="text-align: right" />
-                                                <col />
+                                                <col width="100%" style="text-align: right" />
                                             </colgroup>
-                                            <tr class="forma_grupo">
-                                                <td>
-                                                </td>
-                                            </tr>
                                             <tr>
                                                 <td style="text-align: left">
                                                     <asp:Label ID="lblNuevoDetalle" runat="server" Text="<%$ Resources:resDiccionario,Nuevo %>"></asp:Label>
@@ -246,7 +241,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div id="lista">
+                                                    <div id="lista" style="width:100%">
                                                         <asp:ListView runat="server" ID="lvParametroDetalle" OnItemCommand="lvParametroDetalle_ItemCommand"
                                                             OnItemDataBound="lvParametroDetalle_ItemDataBound">
                                                             <LayoutTemplate>

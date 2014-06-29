@@ -21,7 +21,6 @@ public partial class masGeneral : System.Web.UI.MasterPage
         get { return this.bodyGeneral; }
     }
 
-
     #endregion Public Properties
 
     protected void Page_Load(object sender, EventArgs e)
@@ -29,6 +28,7 @@ public partial class masGeneral : System.Web.UI.MasterPage
         
         if (!this.IsPostBack)
         {
+            
             //string strUsuario = Session["Usuario"].ToString();
             //if (!string.IsNullOrEmpty(strUsuario))
             //{

@@ -1,51 +1,40 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="masGeneral.master.cs"
-    Inherits="masGeneral" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="masGeneral.master.cs" Inherits="masGeneral" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
-     
-
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" id="lnkGeneral" href="../css/general.css" />
     <link rel="stylesheet" type="text/css" id="lnkTable" href="../css/table.css" />
     <link rel="stylesheet" type="text/css" id="lnkMenu" href="../css/menu.css"  />
     <link rel="stylesheet" type="text/css" id="lnkJquery" href="../css/smoothness/jquery.ui.custom.css"  />
-    
-   
-    <script language="JavaScript" type="text/javascript" src="../jsc/jquery.js"></script>
-    <script language="JavaScript" type="text/javascript" src="../jsc/jquery.ui.custom.js"></script>
-    <script language="JavaScript" type="text/javascript" src="../jsc/jquery.autotab.js"></script>
+                                    
+    <script language="JavaScript" type="text/javascript" id="jscJquery" src="../jsc/jquery.js"></script>
+    <script language="JavaScript" type="text/javascript" id="jscCustom" src="../jsc/jquery.ui.custom.js"></script>
+    <script language="JavaScript" type="text/javascript" id="jscJson" src="../jsc/json.js"></script>
     <script language="JavaScript" type="text/javascript" src="../jsc/jquery.maskedinput.js"></script>
-    <script language="JavaScript" type="text/javascript" src="../jsc/json.js"></script>
-    <script language="JavaScript" type="text/javascript" src="../jsc/general.js"></script>
-    <title>Synergy - Educativo</title>
+    <script language="JavaScript" type="text/javascript" id="jscGeneral" src="../jsc/general.js"></script>
+    
+    <title>Synergy</title>
 </head>
-<body id="bodyGeneral"  runat="server">
+<body id="bodyGeneral" runat="server">
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="smGeneral" runat="server" LoadScriptsBeforeUI="true" EnablePartialRendering="true" AsyncPostBackTimeOut="600" ScriptMode="Release" EnableScriptGlobalization="true" EnableScriptLocalization="true" EnablePageMethods="true">
-            <Services>
-                
-            </Services>
-        </asp:ScriptManager>
-        <div id="wrapper">
-
-            <asp:ContentPlaceHolder ID="cphHeader" runat="server">
-            
-            </asp:ContentPlaceHolder>
-
-
-            <asp:ContentPlaceHolder ID="cphMaincol" runat="server">
-            
-            </asp:ContentPlaceHolder>
-
-
-            <asp:ContentPlaceHolder ID="cphFooter" runat="server">
-            
-            </asp:ContentPlaceHolder>
-            <!--end wrapper -->
-        </div>
+    <asp:ScriptManager ID="smGeneral" runat="server" LoadScriptsBeforeUI="true" EnablePartialRendering="true"
+        AsyncPostBackTimeout="600" ScriptMode="Release" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true" EnablePageMethods="true">
+        <Services>
+        </Services>
+    </asp:ScriptManager>
+    <div id="wrapper">
+        <asp:ContentPlaceHolder ID="cphHeader" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="cphMaincol" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="cphFooter" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--end wrapper -->
+    </div>
     </form>
 </body>
 </html>

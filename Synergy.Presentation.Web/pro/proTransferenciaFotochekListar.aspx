@@ -16,6 +16,8 @@
         function AbrirSelectorFamilia(divname) {
 
             var inPaginas = 1;
+            
+            $('#imgBuscarSelectorFamilia').focus();
             $('#' + divname).dialog({
                 autoOpen: false,
                 modal: true,
@@ -105,10 +107,9 @@
         function SeleccionarTodos() {
 
             var chk = document.getElementById('<%=  chkSelTodo.ClientID %>')
-
-        var check = chk.checked;
-        $(".chkCampo1 input[type='checkbox']").attr('checked', check);
-    }
+            var check = chk.checked;
+            $(".chkCampo1 input[type='checkbox']").attr('checked', check);
+        }
 
     function fnLimpiarSession(num) {
         document.getElementById('<%=  hfTabSel.ClientID %>').value = num;
@@ -200,7 +201,7 @@
 
 
 	 function fnListar() {
-	     AbrirVentanaEspera({ title: "Cargando...", message: "Espere un momento por favor" });
+	     AbrirVentanaEspera({ title: "Buscando...", message: "Espere un momento por favor" });
 	     var chk = document.getElementById('<%=  chkSelTodo.ClientID %>')
         chk.checked = false;
 
@@ -216,7 +217,7 @@
 
 function fnGuardar() {
 
-    AbrirVentanaEspera({ title: "Cargando...", message: "Espere un momento por favor" });
+    AbrirVentanaEspera({ title: "Procesando...", message: "Espere un momento por favor" });
     var tab = document.getElementById('<%=  hfTabSel.ClientID %>').value;
         if (tab == '1')
             document.getElementById('<%=  btnGuardarAlumno.ClientID %>').click();
@@ -230,8 +231,9 @@ function fnGuardar() {
 
 function fnQuitarChekSelTodos() {
     var chk = document.getElementById('<%=  chkSelTodo.ClientID %>')
-            chk.checked = false;
-        }
+    chk.checked = false;
+    $(".chkCampo1 input[type='checkbox']").attr('checked', false);
+ }
 
     </script>
 
@@ -331,9 +333,9 @@ function fnQuitarChekSelTodos() {
                 <td>
                     <asp:CheckBox runat="server" ID="chkSelTodo" onclick="javascript:return SeleccionarTodos();" />
                 </td>
-                <td style="text-align: right">&nbsp;Apellido</td>
+                <td style="text-align: right">&nbsp;</td>
                 <td>
-                    <asp:TextBox runat="server" ID="txtCodigoAlumno0"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtApellido" Style="visibility:hidden"></asp:TextBox>
 
                 </td>
             </tr>

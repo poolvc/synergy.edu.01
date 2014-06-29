@@ -1,0 +1,35 @@
+
+ ******************** 
+ 2014-06-29 16:18:45,186 ERROR 14 gescon.logger - 'Error al registrar - Error E021' 
+System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.String'.
+   at Synergy.Data.Edu.DLAlumno.InsetarMasivo(BEAlumnos pbe) in d:\Evercom\AM\01-FDR\Synergy.Edu\Synergy.Data.Edu\Edu\DLAlumno.cs:line 129
+   at Synergy.Application.Edu.BLAlumnos.InsetarMasivo(BEAlumnos obe) in d:\Evercom\AM\01-FDR\Synergy.Edu\Synergy.Application.Edu\Edu\BLAlumnos.cs:line 42
+   at proTransferenciaFotochekListar.GuardarAlumno() in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\pro\proTransferenciaFotochekListar.aspx.cs:line 313
+
+ ******************** 
+ 2014-06-29 17:02:12,565 ERROR 41 gescon.logger - Error en la aplicación:System.NullReferenceException: Object reference not set to an instance of an object.
+   at masMant.ConfiguraHeader(BEUsuarioSistema pbeUsu) in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\mas\masMant.master.cs:line 179
+   at masMant.Cargar(BEUsuarioSistema pbeUsu) in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\mas\masMant.master.cs:line 172
+   at masMant.CargarIni() in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\mas\masMant.master.cs:line 85
+   at masMant.Page_Init(Object sender, EventArgs e) in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\mas\masMant.master.cs:line 70
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.UserControl.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) 
+
+ ******************** 
+ 2014-06-29 18:33:59,886 ERROR 10 gescon.logger - Error en la aplicación:System.NullReferenceException: Object reference not set to an instance of an object.
+   at masMant.ConfiguraHeader(BEUsuarioSistema pbeUsu) in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\mas\masMant.master.cs:line 179
+   at masMant.Cargar(BEUsuarioSistema pbeUsu) in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\mas\masMant.master.cs:line 172
+   at masMant.CargarIni() in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\mas\masMant.master.cs:line 85
+   at masMant.Page_Init(Object sender, EventArgs e) in f:\Evercom\AM\01-FDR\03-EDU\PET-01\FuentesNuevo\Synergy.Edu\Synergy.Presentation.Web\mas\masMant.master.cs:line 70
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnInit(EventArgs e)
+   at System.Web.UI.UserControl.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) 

@@ -19,21 +19,25 @@
                     <div style="float: right">
                         <div id="tabsB">
                             <ul>
+                               
                                 <li> 
                                     <asp:ImageButton ID="ibtAceptar" runat="server" ImageUrl="~/img/ico_save.jpg" ToolTip="<%$ Resources:resDiccionario, Aceptar %>"
                                         CommandName="Aceptar" CommandArgument="1" oncommand="ibtMenu_Command" Height="25px" />
                                 </li>
                                 <li>
                                     <asp:ImageButton ID="ibtAplicar" runat="server" ImageUrl="~/img/ico_edit.jpg" ToolTip="<%$ Resources:resDiccionario, Aplicar %>"
-                                        CommandName="Aplicar" CommandArgument="2" oncommand="ibtMenu_Command" 
-                                        Height="25px"/>
+                                        CommandName="Aplicar" CommandArgument="2" oncommand="ibtMenu_Command" Height="25px"/>
                                 </li>
                                  <li>
                                     <asp:ImageButton ID="ibtEjecutar" runat="server" ImageUrl="~/img/ico_ejecutar.png" ToolTip="<%$ Resources:resDiccionario, Ejecutar %>"
                                         CommandName="Ejecutar" CommandArgument="4" oncommand="ibtMenu_Command" Height="25px" Visible ="false"/>
                                 </li>
+                                 <li>
+                                        <asp:ImageButton ID="ibtExportar" runat="server" ImageUrl="~/img/ico_exportar.png" ToolTip="<%$ Resources:resDiccionario, Exportar %>"
+                                            CommandName="Exportar" CommandArgument="3" oncommand="ibtMenu_Command" Height="25px" Visible ="false"/>
+                                 </li>
                                 <li>
-                                    <asp:ImageButton ID="ibtSalir" runat="server" ImageUrl="~/img/ico_salir.png" ToolTip="<%$ Resources:resDiccionario, Cancelar %>"
+                                    <asp:ImageButton ID="ibtSalir" runat="server" ImageUrl="~/img/ico_salir.png" ToolTip="<%$ Resources:resDiccionario, Salir %>"
                                         CommandName="Cancelar" CommandArgument="3" oncommand="ibtMenu_Command" Height="25px" CausesValidation="false"/>
                                 </li>
                                

@@ -57,6 +57,11 @@ public partial class masMantListar : System.Web.UI.MasterPage
         get { return this.lblTitulo; }
     }
 
+    public string CodigoPagina
+    {
+        set { this.hfCodigoPagina.Value = value; }
+        get { return this.hfCodigoPagina.Value; }
+    }
 
     #endregion Public Properties
 

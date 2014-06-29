@@ -16,12 +16,12 @@ html, body
     border: 0;
     font-size: 11px;
     color: #575757;
-    background-color: #ffffff;
+    /*background-color: #007acc;
     background-image: url(../img/bg_body.png);
     background-repeat: repeat-x;
-    background-position: top;
+    background-position: top;*/
     margin: 0px auto;
-    font-family: Arial, Tahoma, Trebuchet MS, sans-serif;
+    font-family: Trebuchet MS, Arial, Tahoma, Trebuchet MS, sans-serif;
     height: 100%;
 }
 
@@ -46,17 +46,25 @@ html, body
 
 #header
 {
-    position: relative;
-    height: 60px;
-    text-align: left;
     margin: 0;
-    padding: 0 8px 0 8px;
-    z-index: 100;
+    height: 32px;
+    line-height: 32px;
+    padding: 0px 20px;
+    background-color: #007acc;
     /*background-image: url(../img/bg_header.png);
     background-repeat: no-repeat;
     background-position: left top;*/
-    background-color:transparent;
 }
+
+
+.header-logo
+{
+    background: url('../img/sss2013.png') no-repeat -0px -0px !important;
+    width: 187px;
+    height: 20px;
+    margin-top: 6px;
+    float: left;
+}   
 
 #logo
 {
@@ -123,7 +131,6 @@ html, body
     margin: 0px 0 0 0;
     padding: 0;
 }
-
 
 #leftcol
 {
@@ -211,13 +218,6 @@ html, body
     padding: 0;
 }
 
-#centercol-horiz
-{
-    margin: 0 0 0 350px;
-    width: 73%;
-    padding: 0;
-}
-
 #centercol-home
 {
     margin: 0 0 0 0px;
@@ -225,6 +225,13 @@ html, body
     padding: 0;
     float: right;
 } 
+
+#centercol-horiz
+{
+    margin: 0 0 0 350px;
+    width: 73%;
+    padding: 0;
+}
 
 #centercol-long
 {
@@ -275,7 +282,7 @@ html, body
 #bottom-home .div-left
 {
     background-color: #f2f5f6;
-    width: 420px;
+    width: 620px;
     margin: 0;
     padding: 0;
 }
@@ -304,7 +311,7 @@ html, body
 #leftcol-home .div-left
 {
     background-color: #f2f5f6;
-    width: 98%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -319,7 +326,7 @@ html, body
 
 #leftcol-home .div-right-content
 {
-    width: 60%;
+    width: 50%;
     margin: 0;
     padding: 5px 5px 5px 0;
     float: right;
@@ -430,18 +437,18 @@ html, body
     padding: 2px 0 0 0;
     clear: both;
     bottom: 0px;
-    
+    position: relative;
 }
 
 
 #footer-left
 {
-    margin: 0px 10 0 600px;
+    margin: 2px 10px 0 10px;
     padding: 0 0px 0 0;
     color: #747474;
-    font-family: 'Arial' , verdana, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
-    float:  left;
+    float:left;
 }
 
 #footer-left strong
@@ -478,7 +485,7 @@ html, body
 
 #footer-clear{
 	display: block;
-	height: 10px;
+	height: 50px;
 }
 
 
@@ -671,7 +678,6 @@ html, body
     margin: 0;
     padding: 0 10px 0 10px;
     display: block;
-    /*float: right;*/
     list-style: none;
     text-align: center;
     color: #e1edf4;
@@ -773,7 +779,6 @@ html, body
     border-style: solid;
     background-color: #FBFBFB;
 }
-
 
 
 #menu-side ul li.sin-line   {   
@@ -930,7 +935,6 @@ html, body
     color: #006bab;
 }
 
-
 #menu-side-horiz ul li a
 {
     padding: 6px 10px 6px 10px;
@@ -943,7 +947,6 @@ html, body
     float:left;
 }
 
-
 /* DESTACADO 1 ..............................................................................*/
 
 
@@ -951,7 +954,7 @@ html, body
 
 .destacado-home
 {
-    width: 98%;
+    width: 100%;
     margin: 0 0 0px 0;
     padding: 0;   
 }
@@ -1079,12 +1082,16 @@ html, body
 {
     color: #105b9b;
     display: block;
-    background-color: #68a7dd;
+    /*background-color: #68a7dd;*/
     margin: 0;
     padding: 3px 3px 3px 7px;
     font-size: 14px;
 }
 
+.destacado2 h3 a
+{
+    font-size: 12px;
+}
 
 .destacado2 .box2
 {
@@ -1112,7 +1119,7 @@ html, body
 {
     color: #db6105;
     display: block;
-    background-color: #fbcda7;
+    /*background-color: #fbcda7;*/
     margin: 0;
     padding: 3px 3px 3px 7px;
     font-size: 14px;
@@ -1595,6 +1602,15 @@ html, body
     height:50px
 }
 
+.banner-proceso
+{
+    margin: 0 0 10px 0;
+    padding: 0;
+    background-image: url(../img/aplicacion/banner_proceso.png);
+    background-repeat:repeat-x;
+    height:50px
+}
+
 .noti-home  {
 
     padding: 0;
@@ -1710,7 +1726,7 @@ html, body
     margin: 0 0 0 0;
     padding: 0;
     background-color: transparent;
-    /*background-image: url(../img/bg.jpg);*/
+    background-image: url(../img/bg_start1.jpg);
     background-repeat: no-repeat;
     text-align:right;
 }
@@ -1747,7 +1763,7 @@ html, body
     width: 100%;
     height: 60px;
     margin: 0 0 0px 0;
-    padding: 0;
+    padding: 0.2px;
     background-color: transparent;
     background-image: url(../img/aplicacion/banner_reporte.png);
     background-repeat: no-repeat;
@@ -1761,7 +1777,7 @@ html, body
     text-align:left;
     color: #ffffff;
     margin: 0;
-    padding: 0;
+    padding: 1px;
     background-color: #d5d5d5;
     /*background-image: url(../img/bg_flash_destacado.jpg);*/
     background-repeat: repeat-x;
@@ -2154,7 +2170,7 @@ a.ampliar:hover
 
 
 
-select .idioma
+select.idioma
 {
     margin: 0;
     padding: 0 0 0 1px;
@@ -2165,12 +2181,15 @@ select .idioma
     font-family: 'Arial' , verdana, Tahoma, sans-serif;
 }
 
-.select-small
+select.small
 {
-    font-size: 11px;
     margin: 0;
     padding: 0 0 0 1px;
+    font-size: 11px;
+    background-color: #ffffff;
     border: 1px solid #b1b1b1;
+    color: #484848;
+    font-family: 'Arial' , verdana, Tahoma, sans-serif;
 }
 
 select, textarea
@@ -2188,15 +2207,13 @@ select, textarea
     height: 20px;
 }
 
-
-
 input
 {
     border: 1px solid #CCC;
     color: #333;
     font-size: 11px;
     height:16px;
-    }
+}
 
 input .text
 {
@@ -2206,7 +2223,7 @@ input .text
     height:16px;
 }
 
-input .button
+input.button
 {
     margin: 0 5px 0 0;
     padding: 1px 5px;
@@ -2222,21 +2239,10 @@ input .button
 
 input .checkbox
 {
-    margin: 0px;
-    border: 0px none #FFFFFF;
+    border: 0px solid #CCC;
     color: #333;
-    font-size: 8px;
-    margin: 1px 1px 1px 1px;
-}
-
-.input-small
-{
-    margin: 0;
-    padding: 0 0 0 0px;
-    font-size: 10px;
-    background-color: #fff;
-    color: #484848;
-    height:17px;
+    font-size: 11px;
+    height: 16px;
 }
 
 
@@ -2253,8 +2259,9 @@ input .checkbox
 
 .button
 {
+    margin: 0 5px 0 0;
     padding: 0 5px;
-    background-image: url('../img/bg_button.png');
+    background-image: url(../img/bg_button.png);
     background-repeat: repeat-x;
     border: 1px solid #666666;
     width: auto;
@@ -2262,9 +2269,6 @@ input .checkbox
     color: #484848;
     font-size: 11px;
     font-family: Arial ,Verdana, Tahoma, Sans-Serif;
-    margin-left: 0;
-    margin-right: 5px;
-    margin-top: 0;
 }
 
 .button input
@@ -2335,7 +2339,6 @@ input.checkandradio
     background: none;
     border: 0;
     margin: 0 1px 0 1px;
-    
 }
 
 .checkandradio
@@ -2499,11 +2502,12 @@ table.tabla-cursos td
     text-align:center;
 }
 
-.div-aplicacion img
+.div-aplicacion input
 {
-    
     margin: 10px 10px 10px 0;
-    text-align:center;
+    text-align: center;
+    width: auto;
+    height: auto;
 }
 
 .div-aplicacion h1
@@ -2761,6 +2765,13 @@ table.tabla-cursos td
 
 }
 
+.div-cuadro
+{
+    margin: 0 0 0px 0;
+    padding: 0 0 5px 0; 
+    border-bottom: 3px solid #f0f0f0;
+    border: 1px solid #F2F2F2
+}
 
 
 
@@ -2905,9 +2916,8 @@ table.verano td{
 .desactivar
 {
     background-color: #FCFCFC;
-    color: black;
+    color: #C0C0C0;
 }
-
 
 
 .menu_bar
@@ -3071,15 +3081,62 @@ table.verano td{
     background-repeat: no-repeat;
 }
 
-span.error
-{
-    display: inline;
-    padding: 3px;
-    width: auto;
-    font-weight: bold;
-    color: #FF0000;
+.mayuscula{  
+    text-transform: uppercase;  
 }
 
+span.ccosto span.dynatree-icon
+{
+    background-position: 0 center;
+    background-image: url('../img/ico_cc_az.gif');
+    background-repeat: no-repeat;
+}
+  
+  
+  
+  span.clasegactivo span.dynatree-icon
+{
+    background-position: 0 center;
+    background-image: url('../img/ico_cc_az.gif');
+    background-repeat: no-repeat;
+}
+
+ span.claseginactivo span.dynatree-icon
+{
+    background-position: 0 center;
+    background-image: url('../img/ico_cc_gri.gif');
+    background-repeat: no-repeat;
+}
+
+
+  span.claseoactivo span.dynatree-icon
+{
+    background-position: 0 center;
+    background-image: url('../img/ico_cc_ver.gif');
+    background-repeat: no-repeat;
+}
+
+  span.clasesactivo span.dynatree-icon
+{
+    background-position: 0 center;
+    background-image: url('../img/ico_cc_nar.gif');
+    background-repeat: no-repeat;
+}
+
+/*-- copiar para menu emergente --*/
+.centercol
+{
+    margin: 0 0 0 253px;
+    width: 80%;
+    padding: 0;
+}
+
+ .imagen-destacado-texto1
+ {
+    padding-left:15px;     
+}
+/*--end copiar--*/
+ 
 
 #loadingScreen
 {

@@ -127,16 +127,16 @@
     <value>Debe ingresar el nombre.</value>
   </data>
   <data name="msgAlertaSelecionarCompania" xml:space="preserve">
-    <value>Debe seleccionar una compan\u00EDa.</value>
+    <value>Debe seleccionar una compan\u00EDa</value>
   </data>
   <data name="msgErrorActualizarClave" xml:space="preserve">
-    <value>Error al actualizar la clave.</value>
+    <value>Error al actualizar la clave</value>
   </data>
   <data name="msgErrorRegistrar" xml:space="preserve">
-    <value>Error al registrar.</value>
+    <value>Error al registrar</value>
   </data>
   <data name="msgErrorRegistrarUsuario" xml:space="preserve">
-    <value>Error al registrar el usuario.</value>
+    <value>Error al registrar el usuario</value>
   </data>
   <data name="msgAlertaIngresarDescripcionMenu" xml:space="preserve">
     <value>Debe ingresar la descripci\u00F3n del Menú.</value>
@@ -148,25 +148,25 @@
     <value>El código ya existe.</value>
   </data>
   <data name="msgErrorRegistrarAplicacion" xml:space="preserve">
-    <value>Error al registrar la Aplicaci\u00F3n.</value>
+    <value>Error al registrar la Aplicaci\u00F3n</value>
   </data>
   <data name="msgErrorActualizarAplicacion" xml:space="preserve">
     <value>Error al actualizar la Aplicaci\u00F3n.</value>
   </data>
   <data name="msgErrorRegistrarPersona" xml:space="preserve">
-    <value>Error al registrar la Persona.</value>
+    <value>Error al registrar la Persona</value>
   </data>
   <data name="msgErrorActualizarPersona" xml:space="preserve">
-    <value>Error al actualizar la Persona.</value>
+    <value>Error al actualizar la Persona</value>
   </data>
   <data name="msgErrorRegistrarMenu" xml:space="preserve">
-    <value>Error al registrar el Men\u00c1.</value>
+    <value>Error al registrar el Men\u00c1</value>
   </data>
   <data name="msgErrorActualizarMenu" xml:space="preserve">
-    <value>Error al actualizar el Men\u00c1.</value>
+    <value>Error al actualizar el Men\u00c1</value>
   </data>
   <data name="msgErrorEliminarMenu" xml:space="preserve">
-    <value>Error al eliminar el Men\u00c1.</value>
+    <value>Error al eliminar el Men\u00c1</value>
   </data>
   <data name="msgAlertaSeleccioneMenu" xml:space="preserve">
     <value>Debe seleccionar un Men&amp;uacute;</value>
@@ -196,11 +196,11 @@
     <value>El código ya existe.</value>
   </data>
   <data name="msgErrorActualizar" xml:space="preserve">
-    <value>Error al actualizar el registro.</value>
+    <value>Error al actualizar el registro</value>
     <comment>Galexito</comment>
   </data>
   <data name="msgErrorInactivar" xml:space="preserve">
-    <value>Error al inactivar el registro.</value>
+    <value>Error al inactivar el registro</value>
     <comment>Galexito</comment>
   </data>
   <data name="msgAlertaSeleccioneParametro" xml:space="preserve">
@@ -213,7 +213,7 @@
     <value>Debe seleccionar un Departamento</value>
   </data>
   <data name="msgAlertaSeleccioneProvincia" xml:space="preserve">
-    <value>Debe seleccionar una provincia.</value>
+    <value>Debe seleccionar una provincia</value>
   </data>
   <data name="msgAlertaSeleccioneUsuarioPerfil" xml:space="preserve">
     <value>Debe seleccionar un Usuario o Perfil</value>
@@ -237,7 +237,7 @@
     <value>La presentaci\u00F3n es un valor numérico.</value>
   </data>
   <data name="msgAlertaTipoMensualExiste" xml:space="preserve">
-    <value>El tipo de cambio mensual ya existe.</value>
+    <value>El tipo de cambio mensual ya existe</value>
   </data>
   <data name="msgAlertaIngresarPeriodo" xml:space="preserve">
     <value>Debe ingresar el periodo.</value>
@@ -279,13 +279,13 @@
     <value>No existe el Usuario o esta inactivo.</value>
   </data>
   <data name="msgAlertaUsuarioBloqueado" xml:space="preserve">
-    <value>El usuario esta bloqueado.</value>
+    <value>El usuario esta bloqueado</value>
   </data>
   <data name="msgAlertaUsuarioNoRegistrado" xml:space="preserve">
-    <value>El usuario no esta registrado.</value>
+    <value>El usuario no esta registrado</value>
   </data>
   <data name="msgAlertaSelecionarCompaniaHTML" xml:space="preserve">
-    <value>Debe seleccionar una companía.</value>
+    <value>Debe seleccionar una companía</value>
   </data>
   <data name="msgAlertaIngresarCodigoHTML" xml:space="preserve">
     <value>Debe ingresar el código.</value>
@@ -297,7 +297,7 @@
     <value>No existe el aplicativo o no esta disponible.</value>
   </data>
   <data name="msgAlertaSelecionarTipoCompania" xml:space="preserve">
-    <value>Debe seleccionar un tipo de compañia.</value>
+    <value>Debe seleccionar un tipo de compañia</value>
   </data>
   <data name="msgErrorReiniciarClave" xml:space="preserve">
     <value>Error al Reiniciar Clave</value>
@@ -312,7 +312,7 @@
     <value>Clave ingresado es diferente</value>
   </data>
   <data name="msgInformacionClaveCambiado" xml:space="preserve">
-    <value>Su clave se cambio con exito.</value>
+    <value>Su clave se cambio con exito</value>
   </data>
   <data name="msgAlertaIngresarClaveAnterior" xml:space="preserve">
     <value>Debe ingresar clave anterior</value>
@@ -321,7 +321,7 @@
     <value>Clave ingresado es diferente anterior</value>
   </data>
   <data name="msgAlertaSeleccionarPersona" xml:space="preserve">
-    <value>Debe seleccionar una persona.</value>
+    <value>Debe seleccionar una persona</value>
   </data>
   <data name="msgInfoTodoDerechosReservados" xml:space="preserve">
     <value>Todos los derechos reservados</value>
@@ -360,5 +360,8 @@
   </data>
   <data name="msgAlertaPerdidaDeCambiosRealizados" xml:space="preserve">
     <value>Se perderá los cambios realizados. Desea continuar?</value>
+  </data>
+  <data name="msgErrorExportar" xml:space="preserve">
+    <value>Error al exportar</value>
   </data>
 </root>

@@ -972,7 +972,7 @@
     <value>Familias</value>
   </data>
   <data name="SelTodo" xml:space="preserve">
-    <value>SelTodo</value>
+    <value>Sel. Todo</value>
   </data>
   <data name="CodigoEmpleado" xml:space="preserve">
     <value>CodigoEmpleado</value>
@@ -1003,5 +1003,8 @@
   </data>
   <data name="FechaProceso" xml:space="preserve">
     <value>Fecha Proceso</value>
+  </data>
+  <data name="Mapa" xml:space="preserve">
+    <value>Mapa</value>
   </data>
 </root>

@@ -160,6 +160,7 @@ public partial class proTransferenciaFotochekListar : ObjectPage
          chkSelTodo.Checked = false;
          ucpagLista.NumeroPagina = 1;
          ListarAlumno();
+         MsgScript.Append("fnQuitarChekSelTodos();");
          MsgScript.Append("CerrarVentanaEspera();");
          Util.ejecutaScriptAJAX(this.Page, MsgScript.ToString());
      }
@@ -184,6 +185,7 @@ public partial class proTransferenciaFotochekListar : ObjectPage
          chkSelTodo.Checked = false;
          ucpagListaFamilia.NumeroPagina = 1;
          this.ListarFamilia();
+         MsgScript.Append("fnQuitarChekSelTodos();");
          MsgScript.Append("CerrarVentanaEspera();");
          Util.ejecutaScriptAJAX(this.Page, MsgScript.ToString());
      }
@@ -209,6 +211,7 @@ public partial class proTransferenciaFotochekListar : ObjectPage
          chkSelTodo.Checked = false;
          ucpagListaEmpleado.NumeroPagina = 1;
          this.ListarEmpleado();
+         MsgScript.Append("fnQuitarChekSelTodos();");
          MsgScript.Append("CerrarVentanaEspera();");
          Util.ejecutaScriptAJAX(this.Page, MsgScript.ToString());
      }
@@ -318,7 +321,8 @@ public partial class proTransferenciaFotochekListar : ObjectPage
         }
         catch (Exception ex)
         {
-            MsgScript.Append(string.Format("alert('{0}');", ex.Message.ToString()));
+            MsgScript.Append(string.Format("alert('{0} - Error {1}');", Resources.resMensaje.msgErrorRegistrar , "E021"));
+            Logger.Error(string.Format("'{0} - Error {1}'", Resources.resMensaje.msgErrorRegistrar, "E021"), ex);
         }
     }
 
@@ -383,7 +387,8 @@ public partial class proTransferenciaFotochekListar : ObjectPage
         }
         catch (Exception ex)
         {
-            MsgScript.Append(string.Format("alert('{0}');", ex.Message.ToString()));
+            MsgScript.Append(string.Format("alert('{0} - Error {1}');", Resources.resMensaje.msgErrorRegistrar, "E031"));
+            Logger.Error(ex);
         }
     }
 	
@@ -442,7 +447,8 @@ public partial class proTransferenciaFotochekListar : ObjectPage
         }
         catch (Exception ex)
         {
-            MsgScript.Append(string.Format("alert('{0}');", ex.Message.ToString()));
+            MsgScript.Append(string.Format("alert('{0} - Error {1}');", Resources.resMensaje.msgErrorRegistrar, "E041"));
+            Logger.Error(ex);
         }
     }
 

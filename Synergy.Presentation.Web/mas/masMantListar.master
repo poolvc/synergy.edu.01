@@ -29,13 +29,12 @@
                                             CommandName="Procesar" CommandArgument="1" OnCommand="ibtMenu_Command" Height="25px" Visible="false" />
                                     </li>
                                     <li>
-                                        <asp:ImageButton ID="ibtExportar" runat="server" ImageUrl="~/img/ico_edit.jpg" ToolTip="<%$ Resources:resDiccionario, Exportar %>"
+                                        <asp:ImageButton ID="ibtExportar" runat="server" ImageUrl="~/img/ico_exportar.png" ToolTip="<%$ Resources:resDiccionario, Exportar %>"
                                             CommandName="Exportar" CommandArgument="3" oncommand="ibtMenu_Command" Height="25px"/>
                                     </li>
                                      <li>
                                         <asp:ImageButton ID="ibtImprimir" runat="server" ImageUrl="~/img/ico_imp.jpg" ToolTip="<%$ Resources:resDiccionario, Imprimir %>"
-                                            CommandName="Imprimir" CommandArgument="3" oncommand="ibtMenu_Command" 
-                                             Height="25px" Visible="False"/>
+                                            CommandName="Imprimir" CommandArgument="4" oncommand="ibtMenu_Command" Height="25px" Visible="false" />
                                     </li>
                                     
                                 </ul>
@@ -56,4 +55,5 @@
     </asp:ContentPlaceHolder>
     <div class="clearfix">
     </div>
+    <asp:HiddenField ID="hfCodigoPagina" runat="server" />
 </asp:Content>

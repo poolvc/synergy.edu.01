@@ -34,8 +34,7 @@
                                 </li>
                                 <li>
                                     <asp:ImageButton ID="ibtImprimir" runat="server" ImageUrl="~/img/ico_imp.jpg" ToolTip="<%$ Resources:resDiccionario, Imprimir %>"
-                                        CommandName="Imprimir" CommandArgument="3" oncommand="ibtMenu_Command" 
-                                        Height="25px" Visible="False"/>
+                                        CommandName="Imprimir" CommandArgument="3" oncommand="ibtMenu_Command" Height="25px"/>
                                 </li>
                             </ul>
                         </div>

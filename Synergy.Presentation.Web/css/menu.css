@@ -1,4 +1,73 @@
-﻿
+﻿	  
+	  
+/*Menu Superior*/
+
+
+#menu_main
+{
+    float: right;
+    display: block;
+    margin-top: 8px;
+    list-style-type: none;
+}
+
+#menu_main li
+{   float: left;
+    list-style: none;
+    font: 11px bold Constantia,Trebuchet MS, Arial, Tahoma;
+}
+
+
+#menu_main li a
+{   display: block;
+    background: #007acc;
+    padding: 3px 12px;
+    text-decoration: none;
+    border-right: 0px solid white;
+    min-width: 50px;
+    color: #EAFFED;
+    white-space: nowrap;
+}
+
+
+#menu_main li a:hover
+{
+    background: #006AB0;
+}
+
+#menu_main li ul
+{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+    border-top: 1px solid white;
+}
+
+#menu_main li ul li
+{
+    float: none;
+    display: inline;
+}
+
+        #menu_main li ul li a
+{
+    width: auto;
+    background: #00CCFF;
+}
+
+        #menu_main li ul li a:hover
+{
+    background: #007acc;
+}
+        
+
+/*CSS principale per il menu*/
+
+/*CSS principale per il menu*/
+
+
+
 ul#nav, ul#nav li, .ul#nav ul, ul#nav ul li
 {
     margin: 0;
@@ -120,7 +189,7 @@ ul#nav li li.privacy a
     background: url(../img/ico_seg.gif) no-repeat 3px 3px;
 }
 
-	  
+
 /*- Menu Tabs B--------------------------- */
 
 #tabsB

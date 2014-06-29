@@ -24,10 +24,10 @@
                  >=
             </td>
             <td style="width: 5%">
-               <input type="text" id="inValorSelectorFamilia"/>
+               <input type="text" id="inValorSelectorFamilia"  style="foc"/>
             </td>
             <td>
-                <img alt="Buscar" src="../img/ico_buscar4.gif" onclick="BuscarFamiliasSel();"  />
+                <img alt="Buscar" id="imgBuscarSelectorFamilia" src="../img/ico_buscar4.gif" onclick="BuscarFamiliasSel();" />
             </td>
         </tr>
     </table>

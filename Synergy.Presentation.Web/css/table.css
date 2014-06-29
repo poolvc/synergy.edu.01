@@ -4,9 +4,9 @@
     font-size: 11px;
     background: #fff;
     margin: 1px 0px 0px 0px;
-    width: 100%;
     border-collapse: collapse;
     text-align: left;
+    width: 100%;
 }
 .lista th
 {
@@ -46,7 +46,14 @@
     background-color: #F4F4F4;
 }
 
-.selectedItem
+.lista-seleccion td
+{
+    color: #009;
+    height: 20px;
+    background-color: #F4F4F4;
+}
+
+.lista tbody tr:activate td
 {
     color: #009;
     height: 20px;
@@ -56,15 +63,16 @@
 .lista-lin
 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     background: #fff;
     margin: 1px 0px 0px 0px;
+    width: 100%;
     border-collapse: collapse;
     text-align: left;
 }
 .lista-lin th
 {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     color: #666666;
     padding: 2px 1px 2px 1px;
@@ -152,7 +160,6 @@
     margin: 0px 0px 0px 0px;
     width: 100%;
     border-collapse: collapse;
-
     border-top-color: #F8F8F8;
 }
 
@@ -162,28 +169,12 @@
     margin: 0px;
 }
 
-.lista-seleccion td
+.forma_tab
 {
-    color: #009;
-    height: 20px;
-    background-color: #F4F4F4;
-}
-
-.fila-tabla
-{
-     background-color: White;
-}
-
-.fila-tabla-seleccion
-{
-     background-color: #E5E5E5;
-}
-.acciones td
-{
-    border-width:0px;    
-}
-
-.columna-seleccion
-{
-    background-color: #00FF00;
+    padding: 19px 19px 5px 19px;
+    border: 1px solid #D6D9D9;
+    text-shadow: 0 1px 0 #FBFBFB;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.75) inset,0 1px 0 rgba(255,255,255,.75);
+    height: 100%;
 }
